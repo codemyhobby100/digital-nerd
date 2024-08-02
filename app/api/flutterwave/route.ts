@@ -17,7 +17,7 @@ export async function POST(req: NextRequest) {
       // Perform additional actions, such as updating your database, sending emails, etc.
       const paymentEmail = ipnData?.txRef.split("_")[1];
       const paymentName = ipnData?.txRef.split("_")[0];
-      sendEmail(
+      await sendEmail(
         {
           to: paymentEmail
         },
