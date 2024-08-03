@@ -5,6 +5,10 @@ const sendEmail = async (
   { to, multi }: { to: string; multi?: string[] },
   { subject, html, text }: { subject: string; html: string; text?: string }
 ) => {
+  console.log({
+    user: config.emailUser,
+    pass: config.emailUserPass
+  });
   // const transport = await nodemailer.createTransport({
   //   service: 'gmail',
   //   auth: {

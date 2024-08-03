@@ -11,12 +11,12 @@ export async function POST(req: NextRequest) {
 
     // Log the webhook data to the console
     console.log("Webhook received:", ipnData);
-    if (ipnData.status === "successful") {
+    if (ipnData.payment_status === "finished") {
       // const paymentReference = ipnData.data.reference;
 
       // Perform additional actions, such as updating your database, sending emails, etc.
-      const paymentEmail = ipnData?.txRef.split("_")[1];
-      const paymentName = ipnData?.txRef.split("_")[0];
+      const paymentEmail = ipnData?.order_id.split("_")[1];
+      const paymentName = ipnData?.order_id.split("_")[0];
       console.log("email", { paymentEmail });
       await sendEmail(
         {

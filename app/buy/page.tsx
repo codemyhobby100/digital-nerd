@@ -66,9 +66,7 @@ const GetCourse = (props: Props) => {
               alt="logo"
               width={500}
               height={500}
-              className="
-                  rounded-2xl
-                      "
+              className="  rounded-2xl"
             />
             <h1 className="text-4xl mb-4 mt-5 text-white ">
               Shopify Master Course

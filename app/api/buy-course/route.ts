@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-import axios from 'axios';
+import axios from "axios";
 import httpStatus from "http-status"; // A
 import config from "@/config";
 type PaymentData = {
@@ -74,7 +74,8 @@ async function createNowPayInvoice(invoice: {
         ipn_callback_url: invoice.ipn_callback_url
           ? config.baseServerUrl + invoice.ipn_callback_url
           : undefined,
-        price_currency: "USD"
+        price_currency: "USD",
+        amount: undefined
       },
       {
         headers: {
