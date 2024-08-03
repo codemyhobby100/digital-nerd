@@ -115,7 +115,7 @@ export async function POST(req: NextRequest) {
         paymentURL = await createNowPayInvoice({
           amount: paymentData.amount,
           order_id: paymentData.tx_ref,
-          ipn_callback_url: "/webhook",
+          ipn_callback_url: "/api/nowpayment",
           success_url: "/",
           cancel_url: "/"
         });
