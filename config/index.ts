@@ -4,7 +4,7 @@ const config = {
   coursePrice: parseFloat(process.env.NEXT_PUBLIC_COURSEPRICE || "1"),
   nowPaymentApiKey: process.env.NEXT_PUBLIC_NOWPAYMENT_API_KEY || "",
   nowPaymentInvoiceUrl: process.env.NEXT_PUBLIC_NOWPAYMENT_INVOICE_URL || "",
-  baseServerUrl: process.env.NEXT_PUBLIC_BASE_SERVER_URL || "",
+  baseServerUrl: process.env.NEXT_PUBLIC_BASE_URL || "",
   baseFrontEndUrl: process.env.NEXT_PUBLIC_FRONTEND_URL || "",
   emailUser: process.env.NEXT_PUBLIC_EMAIL_USER || "",
   emailUserPass: process.env.NEXT_PUBLIC_EMAIL_USER_PASS || "",
