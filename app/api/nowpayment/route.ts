@@ -23,7 +23,7 @@ export async function POST(req: NextRequest) {
           to: paymentEmail
         },
         {
-          subject: "You have successfully buy the course",
+          subject: "Congratulations! You just bought the course",
           html: `
           <!DOCTYPE html>
           <html lang="en">
