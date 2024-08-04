@@ -83,7 +83,7 @@ export default function Home() {
       id: 4,
       name: '30k students',
       // designation: 'Designer',
-      image: '/images/30.png',
+      image: '/images/3-.png',
     },
     // add more items as needed
   ];
