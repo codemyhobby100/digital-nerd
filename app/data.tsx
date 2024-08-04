@@ -13,6 +13,6 @@ export const checklistItems = [
   {
     title: "Exclusive Mastermind ​Community",
     description:
-      "In our dedicated dropshipping mastermind group, ​you'll connect with peers embarking on their ​dropshipping journey at the same time as you, ​offering a unique opportunity to progress together. ​This community is enriched by experienced ​dropshippers who have already navigated the path ​you're on, ready to guide and inspire.",
+      "In our dedicated dropshipping mastermind group, ​you'll connect with peers embarking on their ​dropshipping journey at the same time as you, ​offering a unique opportunity to progress together. ​This community is enriched by experienced ​dropshippers who have already navigated the path ​you're on.",
   },
 ];

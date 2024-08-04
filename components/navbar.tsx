@@ -1,8 +1,6 @@
 "use client";
 import { useState } from "react";
-import { motion } from "framer-motion";
 import { AlignJustify, X } from "lucide-react";
-
 import Image from "next/image";
 import Link from "next/link";
 import DropDownMenu from "./drop-down-menu";
@@ -12,7 +10,7 @@ interface NavbarProps {
   scrollToShopifyStores: () => void;
   scrollToFaq: () => void;
   scrollToPricing: () => void;
-  scrollToServices: () => void; // Define scrollToServices function
+  scrollToServices: () => void; 
 }
 
 const Navbar = ({
@@ -20,7 +18,7 @@ const Navbar = ({
   scrollToShopifyStores,
   scrollToFaq,
   scrollToPricing,
-  scrollToServices, // Add scrollToServices to props
+  scrollToServices,
 }: NavbarProps) => {
   const [isDropDownVisible, setIsDropDownVisible] = useState(false);
 
@@ -35,38 +33,29 @@ const Navbar = ({
   return (
     <div>
       <div className="p-6 md:p-10 flex items-center justify-between z-50">
-        <div>
-          <Link className="cursor-pointer" href="/">
-            <Image
-              priority
-              src="/images/logo.png"
-              alt="Logo"
-              width={100}
-              height={100}
-              className="w-10 h-10 md:w-14 md:h-14"
-            />
-          </Link>
+        <div className="flex items-center">
+          <Image
+            priority
+            src="/images/logo.png"
+            alt="Logo"
+            width={100}
+            height={100}
+            className="w-10 h-10 md:w-14 md:h-14"
+          />
+          <span className="text-white font-semibold text-[23px]">oxmastery</span>
         </div>
         <div
-          className="cursor-pointer hidden 
-            md:flex space-x-10 items-center
-             text-slate-300 text-center 
-             bg-clip-text text-transparent 
-             bg-gradient-to-b from-neutral-50
-              to bg-neutral-400 bg-opacity-50"
+          className="cursor-pointer hidden md:flex space-x-10 items-center text-slate-300 text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to bg-neutral-400 bg-opacity-50"
         >
           <div onClick={scrollToAbout} className="hover:text-gray-50">
             About
           </div>
-          {/* <div onClick={scrollToWebsiteDesign} className="hover:text-gray-50">
-            Website Design
-          </div> */}
           <div onClick={scrollToShopifyStores} className="hover:text-gray-50">
             Testimonials
           </div>
           <div onClick={scrollToPricing} className="hover:text-gray-50">
             Courses
-          </div>          
+          </div>
           <div onClick={scrollToFaq} className="hover:text-gray-50">
             FAQ
           </div>
@@ -74,36 +63,26 @@ const Navbar = ({
 
         <div className="flex md:hidden">
           {isDropDownVisible ? (
-            // display an x icon when the drop is visible
-            <div
-              onClick={toggleDropDown}
-              className="w-8 h-8 text-slate-300 cursor-pointer"
-            >
+            <div onClick={toggleDropDown} className="w-8 h-8 text-slate-300 cursor-pointer">
               <X />
               <DropDownMenu
                 onClose={closeDropDown}
-                scrollToServices={scrollToServices} // Pass scrollToServices
+                scrollToAbout={scrollToAbout}
+                scrollToShopifyStores={scrollToShopifyStores}
+                scrollToFaq={scrollToFaq}
+                scrollToPricing={scrollToPricing}
+                scrollToServices={scrollToServices}
               />
             </div>
           ) : (
-            <AlignJustify
-              onClick={toggleDropDown}
-              className="w-8 h-8 text-slate-300 cursor-pointer"
-            />
+            <AlignJustify onClick={toggleDropDown} className="w-8 h-8 text-slate-300 cursor-pointer" />
           )}
         </div>
 
         <div className="hidden md:flex">
           <Link
             href="/buy"
-            className="
-            inline-flex h-12 animate-shimmer items-center justify-center 
-            rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] 
-            bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors
-             focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2
-              focus:ring-offset-slate-50
-
-            "
+            className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
           >
             Get Course
           </Link>

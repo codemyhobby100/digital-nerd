@@ -6,20 +6,20 @@ const stores = [
   {
     image: "/images/image2.png",
     quote: "Bird showed us to get started, what to do, and how to do it.",
-    name: "Jason Scer",
+    name: "Adebayo",
   },
   {
     image: "/images/shop-2.jpeg",
     quote:
       "We had no idea how to get started, but Bird showed us the way. And we were able to create something amazing.",
-    name: "John Prency",
+    name: "Chisom",
   },
 
   {
     image: "/images/s-2.webp",
     quote:
       "The team at Bird is amazing. They helped us create a stunning store that we are proud of.",
-    name: "Miguel Martinez",
+    name: "NNamdi",
   },
 ];
 
@@ -37,7 +37,7 @@ const ShopifyStores = () => {
         </div>
 
         <p className="mt-4 text-lg font-normal  text-neutral-800 max-w-lg text-center mx-auto">
-        BUILD your personalized Dropshipping Business& JOIN the new generation of young millionaires
+        BUILD your personalized Dropshipping Business And JOIN the new generation of young millionaires
         </p>
         <div className="md:flex items-center justify-center  px-10 ">
           {stores.map((store, index) => (

@@ -139,11 +139,11 @@ const GetCourse = (props: Props) => {
                   }`}
                 >
                   <img
-                    src="/images/flutterwave.png"
+                    src="/images/bank-1.png"
                     alt="Flutterwave"
                     className="w-12 h-12 mx-auto mb-2"
                   />
-                  <p className="text-white">Flutterwave</p>
+                  <p className="text-white">Bank/Card payment</p>
                 </div>
                 <div
                   onClick={() => handlePaymentMethodSelect("NOWPAY")}
@@ -154,11 +154,11 @@ const GetCourse = (props: Props) => {
                   }`}
                 >
                   <img
-                    src="/images/now-payment.png"
+                    src="/images/crypto-3.png"
                     alt="Non-Payment"
                     className="w-12 h-12 mx-auto mb-2"
                   />
-                  <p className="text-white">Now-Payment</p>
+                  <p className="text-white">Cryptocurrency</p>
                 </div>
               </div>
               <button

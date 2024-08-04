@@ -18,31 +18,31 @@ export function InfiniteMovingCardsDemo() {
 const testimonials = [
   {
     quote:
-      "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair.",
-    name: "Charles Dickens",
+      "The dropshipping mentorship transformed my life. The mentors were incredibly supportive and helped me build a successful online store in just a few months",
+    name: "Adebayo",
     title: "Shopify Master Class",
   },
   {
     quote:
-      "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
-    name: "William Shakespeare",
+      "This mentorship exceeded my expectations. The hands-on approach and personalized feedback were invaluable. I now run a thriving e-commerce business.",
+    name: "Samuel",
     title: "Shopify Master Class",
   },
   {
-    quote: "All that we see or seem is but a dream within a dream.",
-    name: "Edgar Allan Poe",
-    title: "Shopify Master Class",
-  },
-  {
-    quote:
-      "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
-    name: "Jane Austen",
+    quote: "I felt lost before joining, but the mentorship gave me confidence and direction. The support and practical advice were amazing. I now have a successful dropshipping business",
+    name: "Babatunde",
     title: "Shopify Master Class",
   },
   {
     quote:
-      "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
-    name: "Herman Melville",
+      "The mentorship program was a game-changer. The mentors inspired me and helped me overcome obstacles. I'm now a proud owner of a successful online store.",
+    name: "NNamdi",
+    title: "Shopify Master Class",
+  },
+  {
+    quote:
+      "I can't thank the mentorship program enough. The mentors offered unwavering support and personalized guidance. Today, I run a successful dropshipping business.",
+    name: "Chisom",
     title: "Shopify Master Class",
   },
 ];

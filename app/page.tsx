@@ -19,6 +19,7 @@ import Footer from './footer'
 import { InfiniteMovingCardsDemo } from "./snippets/infinite-moving-card-snippet";
 import { AnimatedTooltip } from "./snippets/animated-tooltip";
 import { FaStar } from "react-icons/fa";
+import Head from "next/head";
 
 
 export default function Home() {
@@ -80,84 +81,91 @@ export default function Home() {
     },
     {
       id: 4,
-      name: 'Chisom',
+      name: '30k students',
       // designation: 'Designer',
-      image: '/images/user4.jpg',
+      image: '/images/30.png',
     },
     // add more items as needed
   ];
 
   return (
-    <div className="w-full md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
-      <Navbar
-        scrollToAbout={scrollToAbout}
-        scrollToShopifyStores={scrollToShopifyStores}
-        scrollToPricing={scrollToPricing}
-        scrollToFaq={scrollToFaq}
-        scrollToServices={scrollToServices}
-      />
+    <>
+      <Head>
+        <link rel="icon" href="/logo.png" />
+        {/* You can add more metadata here if needed */}
+      </Head>
+      <div className="w-full md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
+        <Navbar
+          scrollToAbout={scrollToAbout}
+          scrollToShopifyStores={scrollToShopifyStores}
+          scrollToPricing={scrollToPricing}
+          scrollToFaq={scrollToFaq}
+          scrollToServices={scrollToServices}
+        />
 
-      <Spotlight className="hidden md:flex md:-top-80 left-80  " fill="white" />
-      <div className="p-4 mx-auto relative z-10 w-full pt-10 md:pt-20 px-2">
-        <div className="text-4xl pb-5 md:text-7xl px-6 text-center  bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to bg-neutral-400 bg-opacity-50">
-          Unlock the Secrets to a Profitable Dropshipping Business
-        </div>
-        <p className="mt-4 text-lg font-normal  text-neutral-300 max-w-lg text-center mx-auto px-4">
-          Discover how you can create a personalized dropshipping empire and
-          become part of the new generation of young millionaires
-        </p>
-
-        <Link
-          href={"/buy"}
-          className="cursor-pointer flex items-center justify-center border rounded-full w-48 p-2  mx-auto my-6 text-white "
-        >
-          Get Course
-        </Link>
-        <div className="flex flex-row items-center justify-center mb-10 w-full">
-          <AnimatedTooltip items={items} />
-          <div className="flex space-x-1 pl-10">
-            {[...Array(5)].map((_, index) => (
-              <FaStar key={index}className="text-yellow-500 text-[20px]" />
-            ))}
+        <Spotlight className="hidden md:flex md:-top-80 left-80  " fill="white" />
+        <div className="p-4 mx-auto relative z-10 w-full pt-10 md:pt-20 px-2">
+          <div className="text-4xl pb-5 md:text-7xl px-6 text-center  bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to bg-neutral-400 bg-opacity-50">
+            Unlock the Secrets to a Profitable Dropshipping Business
           </div>
-        </div>
+          <p className="mt-4 text-lg font-normal  text-neutral-300 max-w-lg text-center mx-auto px-4">
+            Discover how you can create a personalized dropshipping empire and
+            become part of the new generation of young millionaires
+          </p>
 
-        <div className="w-full pt-20">
-          <SliderOne />
-        </div>
+          <Link
+            href={"/buy"}
+            className="cursor-pointer flex items-center justify-center border rounded-full w-48 p-2  mx-auto my-6 text-white "
+          >
+            Get Course
+          </Link>
+          <div className="flex flex-row items-center justify-center mb-10 w-full">
+            <AnimatedTooltip items={items} />
+            <div className="flex space-x-1 pl-10">
+              {[...Array(5)].map((_, index) => (
+                <FaStar key={index}className="text-yellow-500 text-[20px]" />
+              ))}
+            </div>
+          </div>
 
-        <div ref={AboutnRef}>
-          <About />
-        </div>
-        <div ref={shopifyStoresRef}>
-          <ShopifyStores />
-        </div>
+          <div className="w-full pt-20">
+            <SliderOne />
+          </div>
 
-        <div id="services">
-          <Services />
+          <div ref={AboutnRef}>
+            <About />
+          </div>
+          <div ref={shopifyStoresRef}>
+            <ShopifyStores />
+          </div>
+
+          <div id="services">
+            <Services />
+          </div>
+
+          {/* <div ref={websiteDesignRef}>
+            <WebsiteDesign />
+          </div> */}
+
+          <div ref={pricingRef}>
+            <Pricing />
+          </div>
+
+          {/* <div ref={graphicDesignRef}>
+            <GraphicDesign />
+          </div> */}
+          {/* <div ref={brandsRef}>
+            <Brands />
+          </div> */}
+
+          <InfiniteMovingCardsDemo />
+          <div ref={faqRef}>
+            <FAQS />
+          </div>
+          <Footer />
         </div>
-
-        {/* <div ref={websiteDesignRef}>
-          <WebsiteDesign />
-        </div> */}
-
-        <div ref={pricingRef}>
-          <Pricing />
-        </div>
-
-        {/* <div ref={graphicDesignRef}>
-          <GraphicDesign />
-        </div> */}
-        {/* <div ref={brandsRef}>
-          <Brands />
-        </div> */}
-
-        <InfiniteMovingCardsDemo />
-        <div ref={faqRef}>
-          <FAQS />
-        </div>
-        <Footer />
       </div>
-    </div>
+    </>
+    
   );
 }
