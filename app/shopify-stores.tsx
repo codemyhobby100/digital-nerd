@@ -5,20 +5,20 @@ import Image from "next/image";
 const stores = [
   {
     image: "/images/image2.png",
-    quote: "Bird showed us to get started, what to do, and how to do it.",
+    quote: "Doxmastery showed us to get started, what to do, and how to do it.",
     name: "Adebayo",
   },
   {
     image: "/images/shop-2.jpeg",
     quote:
-      "We had no idea how to get started, but Bird showed us the way. And we were able to create something amazing.",
+      "We had no idea how to get started, but Doxmastery showed us the way. And we were able to create something amazing.",
     name: "Chisom",
   },
 
   {
     image: "/images/s-2.webp",
     quote:
-      "The team at Bird is amazing. They helped us create a stunning store that we are proud of.",
+      "The team at Doxmastery is amazing. They helped us create a stunning store that we are proud of.",
     name: "NNamdi",
   },
 ];
