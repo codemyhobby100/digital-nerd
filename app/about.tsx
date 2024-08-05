@@ -31,7 +31,7 @@ const about = () => {
             </div>
           ))}
           <Link
-            href={"/book"}
+            href={"/buy"}
             className="cursor-pointer flex items-start ml-16 justify-center border w-48 p-2 ml-0 my-6 text-white"
             >
             Get Course
