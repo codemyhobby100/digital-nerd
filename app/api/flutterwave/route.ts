@@ -11,7 +11,7 @@ export async function POST(req: NextRequest) {
 
     // Log the webhook data to the console
     console.log("Webhook received:", ipnData);
-    if (ipnData.status === "successful") {
+    if (ipnData?.data?.status === "successful") {
       // const paymentReference = ipnData.data.reference;
 
       // Perform additional actions, such as updating your database, sending emails, etc.
