@@ -15,8 +15,8 @@ export async function POST(req: NextRequest) {
       // const paymentReference = ipnData.data.reference;
 
       // Perform additional actions, such as updating your database, sending emails, etc.
-      const paymentEmail = ipnData.data?.txRef.split("_")[1];
-      const paymentName = ipnData.data?.txRef.split("_")[0];
+      const paymentEmail = ipnData.data?.tx_ref.split("_")[1];
+      const paymentName = ipnData.data?.tx_ref.split("_")[0];
       console.log("email", { paymentEmail });
       await sendEmail(
         {
