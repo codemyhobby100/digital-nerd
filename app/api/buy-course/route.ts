@@ -116,8 +116,8 @@ export async function POST(req: NextRequest) {
           amount: paymentData.amount,
           order_id: paymentData.tx_ref,
           ipn_callback_url: "/api/nowpayment",
-          success_url: "/",
-          cancel_url: "/"
+          success_url: config.baseFrontEndUrl,
+          cancel_url: config.baseFrontEndUrl
         });
         break;
       default:
