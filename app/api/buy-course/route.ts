@@ -96,7 +96,7 @@ export async function POST(req: NextRequest) {
   try {
     const { paymentMethod, ...paymentDataInfo } = await req.json();
     const paymentData: PaymentData = {
-      amount: 20,
+      amount: config.coursePrice,
       tx_ref: `${paymentDataInfo.name}_${
         paymentDataInfo.email
       }_${new Date().toISOString()}`,
