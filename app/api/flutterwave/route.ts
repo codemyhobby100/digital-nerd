@@ -181,6 +181,8 @@ export async function POST(req: NextRequest) {
             `
         }
       );
+    } else {
+      return NextResponse.json({ message: "Bad request" }, { status: 400 });
     }
     // eslint-disable-next-line no-console
     console.log(ipnData);
