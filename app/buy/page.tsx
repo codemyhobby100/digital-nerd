@@ -71,7 +71,21 @@ const GetCourse = (props: Props) => {
             <h1 className="text-4xl mb-4 mt-5 text-white ">
               Shopify Master Course
             </h1>
-            <h2 className="text-white pb-2 text-2xl">$18.99</h2>
+            <span className="flex items-center space-x-4 pb-3">
+              
+              <h2 className="text-green-500 text-2xl line-through">$49.99</h2>
+              <h2 className="text-white text-2xl">$18.99</h2>
+              <div>
+                <button className="inline-flex h-9 animate-shimmer items-center 
+                justify-center rounded-md border border-slate-800 
+                bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] 
+                bg-[length:200%_100%] px-4 text-sm font-medium text-gray-300 transition-colors 
+                focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 
+                focus:ring-offset-slate-50">
+                  Limited offer
+                </button>
+              </div>
+            </span>
             <p className="text-lg mb-6 text-gray-200">
               Our Shopify Master Course provides essential training to equip you
               with the tools and knowledge needed to succeed in dropshipping
