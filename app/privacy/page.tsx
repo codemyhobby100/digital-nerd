@@ -51,7 +51,7 @@ const Privacy = () => {
             <section className="mb-8">
                 <h2 className="text-xl sm:text-2xl font-semibold mb-4">6. Your Rights</h2>
                 <ul className="list-decimal list-inside space-y-4 text-sm sm:text-base">
-                    <li>6.1. You have the right to access, correct, or delete your personal information. Please contact us at [Your Contact Information] to make such requests.</li>
+                    <li>6.1. You have the right to access, correct, or delete your personal information. Please contact us at <a href="mailto:contact@doxmastery.com" className="text-blue-600 underline">contact@doxmastery.com</a> to make such requests.</li>
                 </ul>
             </section>
 
@@ -64,7 +64,7 @@ const Privacy = () => {
 
             <section className="mb-8">
                 <h2 className="text-xl sm:text-2xl font-semibold mb-4">8. Contact Information</h2>
-                <p className="text-sm sm:text-lg">For any questions or concerns about this Privacy Policy, please contact us at [Your Contact Information].</p>
+                <p className="text-sm sm:text-lg">For any questions or concerns about this Privacy Policy, please contact us at <a href="mailto:contact@doxmastery.com" className="text-blue-600 underline">contact@doxmastery.com</a>.</p>
             </section>
         </div>
     );

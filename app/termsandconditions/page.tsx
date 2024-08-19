@@ -69,13 +69,13 @@ const TermsAndConditions = () => {
             <section className="mb-8">
                 <h2 className="text-xl sm:text-2xl font-semibold mb-4">8. Governing Law</h2>
                 <ul className="list-decimal list-inside space-y-4 text-sm sm:text-base">
-                    <li>8.1. These Terms and Conditions are governed by and construed in accordance with the laws of [Your Country].</li>
+                    <li>8.1. These Terms and Conditions are governed by and construed in accordance with the laws of Nigeria.</li>
                 </ul>
             </section>
 
             <section className="mb-8">
                 <h2 className="text-xl sm:text-2xl font-semibold mb-4">9. Contact Information</h2>
-                <p className="text-sm sm:text-lg">For any questions regarding these Terms and Conditions, please contact us at [Your Contact Information].</p>
+                <p className="text-sm sm:text-lg">For any questions regarding these Terms and Conditions, please contact us at <a href="mailto:contact@doxmastery.com" className="text-blue-600 underline">contact@doxmastery.com</a>.</p>
             </section>
         </div>
     );
