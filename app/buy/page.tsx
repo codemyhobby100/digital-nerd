@@ -74,7 +74,7 @@ const GetCourse = (props: Props) => {
             <span className="flex items-center space-x-4 pb-3">
               
               {/* <h2 className="text-green-500 text-2xl line-through">$49.99</h2> */}
-              <h2 className="text-white text-2xl">$19</h2>
+              <h2 className="text-white text-2xl">$50.00</h2>
               <div>
                 <button className="inline-flex h-9 animate-shimmer items-center 
                 justify-center rounded-md border border-slate-800 
