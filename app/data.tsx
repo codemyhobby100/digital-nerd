@@ -1,18 +1,17 @@
-
 export const checklistItems = [
   {
-    title: "Detailed Training",
+    title: "12-Month Expert Mentorship",
     description:
-      "Over 30 lessons of detailed training, perfect for ​beginners. It's a near-ready-to-use system ​covering product selection, store setup, supplier ​management, marketing, customer acquisition, ​order fulfilment, financial management, and sales ​techniques.",
+      "A full year of personalized guidance from seasoned freelancers to refine your offer, optimize your Fiverr presence, and turn your skills into reliable income.",
   },
   {
-    title: "1 on 1 Guide",
+    title: "In‑Depth Courses & Proven Strategies",
     description:
-      "Designed to guide you through every step of ​starting and scaling a successful dropshipping ​business, this program stands out in the market ​for its comprehensive approach and success in ​helping learners reach significant financial goals.",
+      "Step-by-step training for digital marketing and beyond—covering gig creation, pricing, client communication, delivery, and repeatable systems that convert inquiries into paying clients.",
   },
   {
-    title: "Exclusive Mastermind ​Community",
+    title: "Hands‑On Support to Land Clients",
     description:
-      "In our dedicated dropshipping mastermind group, ​you'll connect with peers embarking on their ​dropshipping journey at the same time as you, ​offering a unique opportunity to progress together. ​This community is enriched by experienced ​dropshippers who have already navigated the path ​you're on.",
+      "Get real feedback on your gigs and proposals, polish your portfolio, and implement outreach playbooks so you can start winning projects and grow your monthly revenue.",
   },
 ];

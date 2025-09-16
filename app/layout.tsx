@@ -5,6 +5,11 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 
+// const font = Montserrat({
+//   subsets: ["latin"],
+//   weight: ["400", "700"],
+// });
+
 const font = Poppins(
   { subsets: ["latin"],
     weight: '400'
@@ -12,8 +17,8 @@ const font = Poppins(
   );
 
 export const metadata: Metadata = {
-  title: "Doxmastery",
-  description: "Unlock the Secrets to Profitable Dropshipping",
+  title: "DigitalNerd – Turn Your Digital Skills Into Income",
+  description: "You've got the skill—we'll help you monetize it. Join our community of creators turning design, writing, marketing, and coding into profitable businesses with daily action plans, premium templates, live workshops, community support, quick-win challenges, and growth accountability.",
 };
 
 export default function RootLayout({

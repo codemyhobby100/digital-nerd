@@ -14,44 +14,32 @@ export function CardHoverEffectDemo() {
 export const projects = [
     {
         icon : <div className="bg-green-100 p-4 rounded-full"><PiStorefront className="w-8 h-8 text-green-600" /></div>,
-        title: "Shopify S​tore S​etup",
-        description:
-          "You will learn in detailed Videos ​how to setup your store from sc​ratch to finish.",
-      
-      },
-      {
+        title: "Daily Action Plans",
+        description: "Get specific, actionable tasks that move you closer to your first client every single day.",
+    },
+    {
         icon : <div className="bg-green-100 p-4 rounded-full"><FaRegMoneyBillAlt className="w-8 h-8 text-green-600" /></div>,
-        title: "Integration & ​Payment System",
-        description:
-          "You will Learn how to Integrate ​Payment Apps into your store and ​automate Products Fulfilment.",
-       
-      },
-      {
+        title: "Premium Templates",
+        description: "Access proven proposals, contracts, and outreach scripts that convert prospects into paying clients.",
+    },
+    {
         icon : <div className="bg-green-100 p-4 rounded-full"><PiMegaphone className="w-8 h-8 text-green-600" /></div>,
-        title: "Ads Setup & M​arketing",
-        description:
-          "You will Learn how to Promote your Store and Make sales ​through Ads & marketing ​channels such as Facebook & ​Tiktok",
-      
-      },
-      {
+        title: "Live Workshops",
+        description: "Weekly sessions on branding, pricing, client acquisition, and scaling your freelance business.",
+    },
+    {
         icon : <div className="bg-green-100 p-4 rounded-full"><MdOutlineAdminPanelSettings className="w-8 h-8 text-green-600" /></div>,
-        title: "Business Administration",
-        description:
-          "Receive guidance from experienced Shopify mentors with personalized feedback and one-on-one sessions.",
-      
-      },
-      {
+        title: "Community Support",
+        description: "Connect with fellow creators, get feedback on your work, and celebrate wins together.",
+    },
+    {
         icon : <div className="bg-green-100 p-4 rounded-full"><PiChalkboardTeacherLight className="w-8 h-8 text-green-600" /></div>,
-        title: "Mentorship",
-        description:
-          "Learn essential management techniques, financial planning, and strategic decision-making for your store.",
-      
-      },
-      {
+        title: "Quick Wins Challenges",
+        description: "30-day challenges designed to help you land your first client or increase your rates.",
+    },
+    {
         icon : <div className="bg-green-100 p-4 rounded-full"><PiHeadsetFill className="w-8 h-8 text-green-600" /></div>,
-        title: "Support",
-        description:
-          "Access live Q&A sessions, a community forum, and 24/7 assistance to help you stay on track.",
-     
-      },
+        title: "Growth Accountability",
+        description: "Weekly check-ins and progress tracking to keep you motivated and on track.",
+    }
 ];

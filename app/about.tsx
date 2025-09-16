@@ -8,7 +8,7 @@ const about = () => {
   return (
     <div className="mt-20 px-4">
       <div className="text-3xl bg-gradient-to-b from-green-500 to-sky-200 bg-opacity-50 bg-clip-text text-transparent sm:text-5xl lg:text-6xl text-center mt-6 tracking-wide">
-         What You Get from <br /> the ​Course
+         What You Get from <br /> fiverr 2.0
       </div>
       <div className="flex flex-wrap pt-8 justify-center">
         <div className="p-2 w-full lg:w-1/2 flex justify-center">

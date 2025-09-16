@@ -62,19 +62,19 @@ const GetCourse = (props: Props) => {
           <div>
             <Image
               priority
-              src="/images/slider-4.png"
+              src="/images/banner5.jpg"
               alt="logo"
               width={500}
               height={500}
               className="rounded-2xl"
             />
             <h1 className="text-4xl mb-4 mt-5 text-white ">
-              Shopify Master Course
+              Fiverr Income 2.0
             </h1>
             <span className="flex items-center space-x-4 pb-3">
               
               {/* <h2 className="text-green-500 text-2xl line-through">$49.99</h2> */}
-              <h2 className="text-white text-2xl">$18.99</h2>
+              <h2 className="text-white text-2xl">N30,000</h2>
               <div>
                 <button className="inline-flex h-9 animate-shimmer items-center 
                 justify-center rounded-md border border-slate-800 
@@ -140,10 +140,10 @@ const GetCourse = (props: Props) => {
                 required
                 className="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 text-white"
               />
-              <label className="inline-block text-lg pt-4 text-white ">
+              {/* <label className="inline-block text-lg pt-4 text-white ">
                 Select a payment method
-              </label>
-              <div className="flex justify-around gap-4 mb-6">
+              </label> */}
+              {/* <div className="flex justify-around gap-4 mb-6">
                 <div
                   onClick={() => handlePaymentMethodSelect("FLUTTERWAVE")}
                   className={`p-4 rounded-lg bg-gray-800 border border-gray-700 text-center cursor-pointer w-full ${
@@ -174,7 +174,7 @@ const GetCourse = (props: Props) => {
                   />
                   <p className="text-white">Cryptocurrency</p>
                 </div>
-              </div>
+              </div> */}
               <button
                 disabled={
                   !formData.paymentMethod || !formData.name || !formData.email

@@ -18,26 +18,37 @@ const FAQS = () => {
         <Accordion type="single" collapsible>
           <AccordionItem value="item-1">
             <AccordionTrigger className="text-left text-lg md:text-xl">
-              What can I expect ​when I join?
+              What if I&apos;m just starting out?
             </AccordionTrigger>
             <AccordionContent className="text-left text-lg md:text-xl">
-              You will get instant access to ​the app with our entire ​course, you will also be ​given an invite to the ​exclusive community with ​coaching and support.
+              Perfect! Our community is designed for people who just learned a digital skill and want to monetize it. We&apos;ll guide you from zero to your first paying client.
             </AccordionContent>
           </AccordionItem>
+
           <AccordionItem value="item-2">
             <AccordionTrigger className="text-left text-lg md:text-xl">
-              How soon can I start ​seeing some results?
+              How quickly will I see results?
             </AccordionTrigger>
             <AccordionContent className="text-left text-lg md:text-xl">
-              We&apos;ve seen students get up ​and running in as fast as 7 ​days and start making sales ​in their first weeks but ​building a real business ​takes time.​
+              Most members land their first client within 30–60 days. However, results depend on your commitment to implementing our action plans and engaging with the community.
             </AccordionContent>
           </AccordionItem>
+
           <AccordionItem value="item-3">
             <AccordionTrigger className="text-left text-lg md:text-xl">
-              Is there a guarantee ​for success?
+              Can I cancel anytime?
             </AccordionTrigger>
             <AccordionContent className="text-left text-lg md:text-xl">
-              There are no guarantees for ​any success in any ​business. The only thing we ​can guarantee is that our ​system has been validated ​by the success stories.
+              Absolutely. You can cancel your membership at any time. We believe in earning your trust every month, not locking you in.
+            </AccordionContent>
+          </AccordionItem>
+
+          <AccordionItem value="item-4">
+            <AccordionTrigger className="text-left text-lg md:text-xl">
+              What skills does this work for?
+            </AccordionTrigger>
+            <AccordionContent className="text-left text-lg md:text-xl">
+              Any digital skill! Design, writing, coding, marketing, video editing, social media management—if it can be done remotely, we can help you monetize it.
             </AccordionContent>
           </AccordionItem>
         </Accordion>

@@ -18,14 +18,14 @@ const Footer = () => {
         height={100}
         className="w-10 h-10 md:w-14 md:h-14"
       />
-      <span className='text-white font-semibold text-[23px]'>oxmastery</span>
+      <span className='text-white font-semibold text-[23px]'>igital Nerd</span>
     </div>
     <div className='flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4'>
       <Link href="/privacy" className='text-white'>Privacy Policy</Link>
       <Link href="/termsandconditions" className='text-white'>Terms And Condition</Link>
       <Link href="/refundpolicy" className='text-white'>Refund Policy</Link>
       <div className='flex gap-3'>
-        <a href="https://www.instagram.com/doxmastery/" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.instagram.com/digitalnerdhq/" target="_blank" rel="noopener noreferrer">
           <FaInstagram className='text-[18px] text-white'/>
         </a>
         <a href="https://web.telegram.org/k/#@doxmastery" target="_blank" rel="noopener noreferrer">

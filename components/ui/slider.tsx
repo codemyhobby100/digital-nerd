@@ -34,7 +34,7 @@ const SliderOne = () => {
           <div className="rounded-md px-2 md:p-10">
             <Image
               priority
-              src="/images/slider-4.png"
+              src="/images/banner5.jpg"
               alt="logo"
               width={500}
               height={500}
@@ -49,7 +49,37 @@ const SliderOne = () => {
           <div className="rounded-md px-2 md:p-10">
             <Image
               priority
-              src="/images/slider-2.png"
+              src="/images/banner4.jpg"
+              alt="logo"
+              width={500}
+              height={500}
+              className="
+                  rounded-2xl 
+                      "
+            />
+          </div>
+        </>
+
+        <>
+          <div className="rounded-md px-2 md:p-10">
+            <Image
+              priority
+              src="/images/banner5.jpg"
+              alt="logo"
+              width={500}
+              height={500}
+              className="
+                  rounded-2xl 
+                      "
+            />
+          </div>
+        </>
+
+        <>
+          <div className="rounded-md px-2 md:p-10">
+            <Image
+              priority
+              src="/images/banner4.jpg"
               alt="logo"
               width={500}
               height={500}
@@ -72,36 +102,16 @@ const SliderOne = () => {
                   rounded-2xl 
                       "
             />
-          </div>
-        </>
-
-        <>
-          <div className="rounded-md px-2 md:p-10">
-            <Image
+            {/* <Image
               priority
-              src="/images/slider-2.png"
+              src="/images/banner5.jpg"
               alt="logo"
               width={500}
               height={500}
               className="
                   rounded-2xl 
                       "
-            />
-          </div>
-        </>
-
-        <>
-          <div className="rounded-md px-2 md:p-10">
-            <Image
-              priority
-              src="/images/slider-3.png"
-              alt="logo"
-              width={500}
-              height={500}
-              className="
-                  rounded-2xl 
-                      "
-            />
+            /> */}
           </div>
         </>
       </Slider>

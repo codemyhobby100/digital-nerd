@@ -9,7 +9,7 @@ const Services = () => {
         What to Expect in the Program
       </div>
       <p className="mt-4 text-lg font-normal text-neutral-300 text-center mx-auto px-4 md:px-6 lg:px-10">
-        Culminating with a bonus lesson, it promises to leave learners with a clear vision for future endeavors, ensuring they are well-prepared for the next phase of their entrepreneurial journey to scale past 100k a month.
+        We don't just teach skills - we help you turn them into a sustainable income. Here's what you get when you join.
       </p>
 
       <CardHoverEffectDemo />
