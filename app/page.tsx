@@ -30,7 +30,7 @@ import { motion } from "framer-motion";
  *
  * Tip: Remove any CSS like `html { scroll-behavior: smooth; }` to avoid conflicts.
  */
-export function useLenis(options?: Partial<LenisOptions>) {
+function useLenis(options?: Partial<LenisOptions>) {
   const lenisRef = useRef<Lenis | null>(null);
 
   useEffect(() => {
