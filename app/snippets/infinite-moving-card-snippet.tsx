@@ -1,16 +1,12 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 
 export function InfiniteMovingCardsDemo() {
   return (
     <div className="pb-40 rounded-md flex flex-col antialiased my-4 dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
-      <InfiniteMovingCards
-        items={testimonials}
-        direction="right"
-        speed="normal"
-      />
+      <InfiniteMovingCards items={testimonials} direction="right" speed="normal" />
     </div>
   );
 }
@@ -18,31 +14,32 @@ export function InfiniteMovingCardsDemo() {
 const testimonials = [
   {
     quote:
-      "The dropshipping mentorship transformed my life. The mentors were incredibly supportive and helped me build a successful online store in just a few months",
-    name: "Adebayo",
-    title: "Shopify Master Class",
+      "If you are a Level 1 seller on Fiverr, there is a faster way to land orders. Coach @Hon_Joshuaa explained it—I never knew this was possible.",
+    name: "T.E",
+    title: "Freelancer",
   },
   {
     quote:
-      "This mentorship exceeded my expectations. The hands-on approach and personalized feedback were invaluable. I now run a thriving e-commerce business.",
-    name: "Samuel",
-    title: "Shopify Master Class",
-  },
-  {
-    quote: "I felt lost before joining, but the mentorship gave me confidence and direction. The support and practical advice were amazing. I now have a successful dropshipping business",
-    name: "Babatunde",
-    title: "Shopify Master Class",
+      "This program was worth every penny. Clear, practical steps and support that helps you close clients and grow steady income.",
+    name: "H.S.M",
+    title: "Freelancer",
   },
   {
     quote:
-      "The mentorship program was a game-changer. The mentors inspired me and helped me overcome obstacles. I'm now a proud owner of a successful online store.",
-    name: "NNamdi",
-    title: "Shopify Master Class",
+      "Fiverr 1.0 changed my freelancing path. With simple systems and mentorship, I fixed my mistakes and doubled my income in a few months.",
+    name: "a****10****E",
+    title: "Freelancer",
   },
   {
     quote:
-      "I can't thank the mentorship program enough. The mentors offered unwavering support and personalized guidance. Today, I run a successful dropshipping business.",
-    name: "Chisom",
-    title: "Shopify Master Class",
+      "Level 1 sellers can land orders faster. The method Coach @Hon_Joshuaa shared opened my eyes and gave me a plan I could use the same day.",
+    name: "T.E",
+    title: "Freelancer",
+  },
+  {
+    quote:
+      "Strong community, real feedback, and templates that convert. I refined my offer and started getting replies from clients within weeks.",
+    name: "Tunde",
+    title: "Freelancer",
   },
 ];

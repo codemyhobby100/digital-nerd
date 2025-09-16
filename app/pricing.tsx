@@ -75,11 +75,13 @@ const Pricing = () => {
   return (
     <div className="w-full md:items-center md:justify-center antialiased bg-grid-white/[0.02] relative overflow-hidden">
       <div className="flex items-center justify-center flex-col">
-        <div className="text-5xl pb-10 md:pb-20 px-6 text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-green-500 bg-opacity-50">
-          One‑on‑One Freelancing Programs
-          <br />
-          Build skills, get clients, and grow your income.
+
+      <div className="text-4xl pb-5 md:text-7xl text-center bg-clip-text text-transparent bg-gradient-to-b from-green-500 to-neutral-50 bg-opacity-50 mt-20">
+          One‑on‑One Freelancing <br /> Programs
         </div>
+        <p className="mt-2 mb-4 text-lg font-normal text-neutral-300 text-center mx-auto px-4 md:px-6 lg:px-10">
+          Build skills, get clients, and grow your income.
+        </p>
 
         <div className="grid gap-6 px-6 md:w-4/5 2xl:w-3/4 cursor-pointer pb-20 items-start grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {plans.map((plan) => (

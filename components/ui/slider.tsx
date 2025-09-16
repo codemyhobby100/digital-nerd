@@ -92,7 +92,7 @@ const SliderOne = () => {
 
         <>
           <div className="rounded-md px-2 md:p-10">
-            <Image
+            {/* <Image
               priority
               src="/images/slider-3.png"
               alt="logo"
@@ -101,8 +101,8 @@ const SliderOne = () => {
               className="
                   rounded-2xl 
                       "
-            />
-            {/* <Image
+            /> */}
+            <Image
               priority
               src="/images/banner5.jpg"
               alt="logo"
@@ -111,7 +111,7 @@ const SliderOne = () => {
               className="
                   rounded-2xl 
                       "
-            /> */}
+            />
           </div>
         </>
       </Slider>
