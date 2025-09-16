@@ -15,12 +15,11 @@ import Pricing from "./pricing";
 import Brands from "./brands";
 import Services from "./services";
 import FAQS from "./faq";
-import Footer from './footer'
+import Footer from "./footer";
 import { InfiniteMovingCardsDemo } from "./snippets/infinite-moving-card-snippet";
 import { AnimatedTooltip } from "./snippets/animated-tooltip";
 import { FaStar } from "react-icons/fa";
 import Head from "next/head";
-
 
 export default function Home() {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
@@ -43,7 +42,6 @@ export default function Home() {
     AboutnRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
-
   const scrollToShopifyStores = () => {
     shopifyStoresRef.current?.scrollIntoView({ behavior: "smooth" });
   };
@@ -63,27 +61,27 @@ export default function Home() {
   const items = [
     {
       id: 1,
-      name: 'Samuel',
+      name: "Samuel",
       // designation: 'Developer',
-      image: '/images/user1.jpg',
+      image: "/images/user1.jpg",
     },
     {
       id: 2,
-      name: 'Blessing',
+      name: "Blessing",
       // designation: 'Designer',
-      image: '/images/user2.jpg',
+      image: "/images/user2.jpg",
     },
     {
       id: 3,
-      name: 'Babatunde',
+      name: "Babatunde",
       // designation: 'Designer',
-      image: '/images/user3.jpg',
+      image: "/images/user3.jpg",
     },
     {
       id: 4,
-      name: '30k students',
+      name: "30k students",
       // designation: 'Designer',
-      image: '/images/3-.png',
+      image: "/images/3-.png",
     },
     // add more items as needed
   ];
@@ -106,10 +104,10 @@ export default function Home() {
         <Spotlight className="hidden md:flex md:-top-80 left-80  " fill="white" />
         <div className="p-4 mx-auto relative z-10 w-full pt-10 md:pt-20 px-2">
           <div className="text-4xl pb-5 md:text-7xl px-6 text-center  bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to bg-neutral-400 bg-opacity-50">
-          Turn Your Digital Skills Into Income
+            Turn Your Digital Skills Into Income
           </div>
           <p className="mt-4 text-lg font-normal  text-neutral-300 max-w-lg md:max-w-2xl lg:max-w-3xl text-center mx-auto px-4 md:px-0">
-            You've got the skill, we'll help you monetize it. <br />
+            You&apos;ve got the skill, we&apos;ll help you monetize it. <br />
             Join our community of creators turning design, writing, marketing, and coding into profitable businesses.
           </p>
 
@@ -123,7 +121,7 @@ export default function Home() {
             <AnimatedTooltip items={items} />
             <div className="flex space-x-1 pl-10">
               {[...Array(5)].map((_, index) => (
-                <FaStar key={index}className="text-yellow-500 text-[20px]" />
+                <FaStar key={index} className="text-yellow-500 text-[20px]" />
               ))}
             </div>
           </div>
@@ -166,6 +164,5 @@ export default function Home() {
         </div>
       </div>
     </>
-    
   );
 }

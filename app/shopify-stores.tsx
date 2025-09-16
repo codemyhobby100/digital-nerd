@@ -8,7 +8,7 @@ const stores = [
   {
     image: "/images/testimonial.jpg",
     quote:
-      "if you're a level 1 seller on fiverr there is a faster way to land orders. on Set Coach @Hon_Joshuaa explained this, i never knew this was possible, wow",
+      "if you&apos;re a level 1 seller on fiverr there is a faster way to land orders. on Set Coach @Hon_Joshuaa explained this, i never knew this was possible, wow",
     name: "T.E",
   },
   {
@@ -33,7 +33,7 @@ const ShopifyStores = () => {
         </div>
 
         <p className="mt-2 mb-4 text-lg font-normal text-neutral-800 max-w-lg text-center mx-auto">
-          Don't just take our word for it. Here's what our our 2024 participants saying about their results.
+          Don&apos;t just take our word for it. Here&apos;s what our our 2024 participants saying about their results.
         </p>
 
         {/* Use a responsive grid with gaps to create space between items */}
