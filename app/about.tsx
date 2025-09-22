@@ -14,7 +14,7 @@ const about = () => {
         <div className="p-2 w-full lg:w-1/2 flex justify-center">
           <img
             alt="phone"
-            src="/images/phone.png"
+            src="/images/phone2.png"
             className="max-w-full h-auto md:w-3/4 lg:w-full"
           />
         </div>

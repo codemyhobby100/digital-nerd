@@ -19,17 +19,11 @@ import FAQS from "./faq";
 import Footer from "./footer";
 import { InfiniteMovingCardsDemo } from "./snippets/infinite-moving-card-snippet";
 import { AnimatedTooltip } from "./snippets/animated-tooltip";
-import { FaStar } from "react-icons/fa";
+import { FaStar, FaTelegramPlane, FaWhatsapp } from "react-icons/fa";
 import Head from "next/head";
 import { motion } from "framer-motion";
 
-/**
- * useLenis
- * Initializes Lenis smooth scrolling with a requestAnimationFrame loop.
- * Call this hook once in a top-level client component (e.g., app/page.tsx).
- *
- * Tip: Remove any CSS like `html { scroll-behavior: smooth; }` to avoid conflicts.
- */
+
 function useLenis(options?: Partial<LenisOptions>) {
   const lenisRef = useRef<Lenis | null>(null);
 
@@ -160,119 +154,182 @@ export default function Home() {
 
         <Spotlight className="hidden md:flex md:-top-80 left-80  " fill="white" />
 
-        <div className="p-4 mx-auto relative z-10 w-full pt-10 md:pt-20 px-2">
-          {/* Hero */}
+        {/* Hero Section - Fully Responsive */}
+        <div className="relative z-10 w-full pt-8 sm:pt-12 md:pt-16 lg:pt-20 xl:pt-24 px-4 sm:px-6 md:px-8 lg:px-6">
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
+            className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16 xl:gap-20 items-center max-w-7xl mx-auto"
           >
-            <div className="text-4xl pb-5 md:text-7xl px-6 text-center  bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to bg-neutral-400 bg-opacity-50">
-              Turn Your Digital Skills Into Income
-            </div>
-            <p className="mt-4 text-lg font-normal  text-neutral-300 max-w-lg md:max-w-2xl lg:max-w-3xl text-center mx-auto px-4 md:px-0">
-              You&apos;ve got the skill, we&apos;ll help you monetize it. <br />
-              Join our community of creators turning design, writing, marketing, and coding into profitable businesses.
-            </p>
-          </motion.div>
+            {/* Left Side - Text Content */}
+            <div className="space-y-4 sm:space-y-5 md:space-y-6 order-2 lg:order-1 px-2 sm:px-0">
+              {/* Main Heading */}
+              <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to bg-neutral-400 bg-opacity-50 leading-tight">
+                Digitalnerd HQ
+              </div>
+              
+              {/* Subheading */}
+              <div className="text-lg sm:text-lg md:text-xl lg:text-2xl text-neutral-300 font-medium">
+                Creativity, Innovation, Empowerment
+              </div>
+              
+              {/* Main Description */}
+              <p className="text-base sm:text-lg md:text-xl font-normal text-neutral-300 leading-relaxed">
+                Monetize digital skills to paychecks, master the deep secrets in the digital space.
+              </p>
+              
+              {/* Secondary Description */}
+              <p className="text-sm sm:text-base text-neutral-400 leading-relaxed">
+                You&apos;ve got the skill, we&apos;ll help you monetize it. Join our community of creators turning design, writing, marketing and coding into a professional business.
+              </p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: "easeOut", delay: 0.15 }}
-            className="flex items-center justify-center"
-          >
-            <Link
-              href={"/buy"}
-              className="cursor-pointer flex items-center justify-center border rounded-full w-48 p-2  mx-auto my-6 text-white "
+              {/* Community CTA Section */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, ease: "easeOut", delay: 0.15 }}
+                className="pt-4 sm:pt-6"
+              >
+                {/* Main CTA */}
+                <div className="mb-4 sm:mb-5">
+                  <Link
+                    href={"/buy"}
+                    className="inline-flex items-center justify-center bg-white text-black font-semibold rounded-full px-6 py-2.5 text-sm hover:bg-gray-100 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
+                  >
+                    Join Private Community
+                  </Link>
+                </div>
+
+                {/* Free Groups */}
+                <div>
+                  <p className="text-sm text-neutral-400 mb-3">Or join our free communities</p>
+                  <div className="flex gap-3">
+                    <Link
+                      href={"https://chat.whatsapp.com/CgebHVjItg61r8nfDxQSzl"}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center bg-neutral-800 hover:bg-neutral-700 rounded-full px-4 py-2 text-sm text-white transition-all duration-200 border border-neutral-700 hover:border-neutral-600"
+                    >
+                      <FaWhatsapp className="mr-2 text-green-400" />
+                      WhatsApp
+                    </Link>
+                    <Link
+                      href={"https://t.me/DigitalNerdHQ"}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center bg-neutral-800 hover:bg-neutral-700 rounded-full px-4 py-2 text-sm text-white transition-all duration-200 border border-neutral-700 hover:border-neutral-600"
+                    >
+                      <FaTelegramPlane className="mr-2 text-blue-400" />
+                      Telegram
+                    </Link>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Social Proof */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, ease: "easeOut", delay: 0.25 }}
+                className="pt-6 sm:pt-8"
+              >
+                <div className="flex flex-col gap-3 sm:gap-4">
+                  {/* Avatars */}
+                  <div className="flex items-center">
+                    <AnimatedTooltip items={items} />
+                  </div>
+                  
+                  {/* Stars and text */}
+                  <div>
+                    <div className="flex space-x-1 mb-2">
+                      {[...Array(5)].map((_, index) => (
+                        <FaStar key={index} className="text-yellow-400 text-lg" />
+                      ))}
+                    </div>
+                    <p className="text-sm text-neutral-400">
+                      Over 300+ freelancers and creators
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Right Side - Image */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+              className="relative order-1 lg:order-2 px-2 sm:px-0"
             >
-              Join the Community
-            </Link>
+              <div className="relative w-full h-[300px] sm:h-[350px] md:h-[400px] lg:h-[450px] xl:h-[550px] 2xl:h-[600px]">
+                <Image
+                  src="/images/banner.jpg" 
+                  alt="Digital creators working"
+                  fill
+                  className="object-cover rounded-xl sm:rounded-2xl"
+                  priority
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 45vw"
+                />
+                {/* Optional overlay for better text readability */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-xl sm:rounded-2xl" />
+              </div>
+              
+              {/* Optional floating elements for visual interest - hidden on mobile for cleaner look */}
+              <div className="hidden sm:block absolute -top-2 sm:-top-4 -right-2 sm:-right-4 w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-xl" />
+              <div className="hidden sm:block absolute -bottom-2 sm:-bottom-4 -left-2 sm:-left-4 w-20 sm:w-24 md:w-32 h-20 sm:h-24 md:h-32 bg-gradient-to-br from-green-500/20 to-blue-500/20 rounded-full blur-xl" />
+            </motion.div>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: "easeOut", delay: 0.25 }}
-            className="flex flex-row items-center justify-center mb-10 w-full"
-          >
-            <AnimatedTooltip items={items} />
-            <div className="flex space-x-1 pl-10">
-              {[...Array(5)].map((_, index) => (
-                <FaStar key={index} className="text-yellow-500 text-[20px]" />
-              ))}
-            </div>
-          </motion.div>
+          {/* Responsive bottom spacing */}
+          <div className="h-16 sm:h-20 md:h-24 lg:h-32 xl:h-40 2xl:h-48" />
+        </div>
 
-          {/* Slider */}
+        {/* Services Section - Full width white background */}
+        <div id="services" ref={servicesRef}>
           <motion.div {...sectionProps}>
-            <div className="w-full pt-20">
-              <SliderOne />
-            </div>
+            <Services />
           </motion.div>
+        </div>
 
-          {/* About */}
+        {/* Dark sections container - About section */}
+        <div className="p-4 mx-auto relative z-10 w-full px-2">
           <div ref={AboutnRef}>
             <motion.div {...sectionProps}>
               <About />
             </motion.div>
           </div>
+        </div>
 
-          {/* Success Stories */}
-          <div ref={shopifyStoresRef}>
-            <motion.div {...sectionProps}>
-              <ShopifyStores />
-            </motion.div>
-          </div>
+        {/* Success Stories Section - Full width white background */}
+        <div ref={shopifyStoresRef}>
+          <motion.div {...sectionProps}>
+            <ShopifyStores />
+          </motion.div>
+        </div>
 
-          {/* Services */}
-          <div id="services" ref={servicesRef}>
-            <motion.div {...sectionProps}>
-              <Services />
-            </motion.div>
-          </div>
-
-          {/* WebsiteDesign (optional)
-          <div ref={websiteDesignRef}>
-            <motion.div {...sectionProps}>
-              <WebsiteDesign />
-            </motion.div>
-          </div> */}
-
-          {/* Pricing */}
+        {/* Dark sections container - Pricing and Moving Cards */}
+        <div className="p-4 mx-auto relative z-10 w-full px-2">
           <div ref={pricingRef}>
             <motion.div {...sectionProps}>
               <Pricing />
             </motion.div>
           </div>
 
-          {/* GraphicDesign (optional)
-          <div ref={graphicDesignRef}>
-            <motion.div {...sectionProps}>
-              <GraphicDesign />
-            </motion.div>
-          </div> */}
-
-          {/* Brands (optional)
-          <div ref={brandsRef}>
-            <motion.div {...sectionProps}>
-              <Brands />
-            </motion.div>
-          </div> */}
-
-          {/* Moving Cards */}
           <motion.div {...sectionProps}>
             <InfiniteMovingCardsDemo />
           </motion.div>
+        </div>
 
-          {/* FAQ */}
-          <div ref={faqRef}>
-            <motion.div {...sectionProps}>
-              <FAQS />
-            </motion.div>
-          </div>
+        {/* FAQ Section - Full width white background */}
+        <div ref={faqRef}>
+          <motion.div {...sectionProps}>
+            <FAQS />
+          </motion.div>
+        </div>
 
-          {/* Footer */}
+        {/* Dark sections container - Footer */}
+        <div className="p-4 mx-auto relative z-10 w-full px-2">
           <motion.div {...sectionProps}>
             <Footer />
           </motion.div>
