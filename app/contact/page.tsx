@@ -57,7 +57,13 @@ const ContactPage: React.FC = () => {
 
   return (
     <div className="w-full md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
-      <Navbar />
+      <Navbar
+        scrollToAbout={() => {}}
+        scrollToShopifyStores={() => {}}
+        scrollToFaq={() => {}}
+        scrollToPricing={() => {}}
+        scrollToServices={() => {}}
+      />
       <Spotlight className="hidden md:flex md:-top-80 left-80" fill="white" />
       
       <div className="p-4 mx-auto relative z-10 w-full pt-10 md:pt-20 px-2">
@@ -72,7 +78,7 @@ const ContactPage: React.FC = () => {
             Contact Us
           </div>
           <p className="mt-4 text-lg font-normal text-neutral-300 max-w-lg md:max-w-2xl lg:max-w-3xl text-center mx-auto px-4 md:px-0">
-            Get in touch with our team. We're here to help and answer any questions you might have.
+            Get in touch with our team. We&apos;re here to help and answer any questions you might have.
           </p>
         </motion.div>
 
