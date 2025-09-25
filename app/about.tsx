@@ -16,7 +16,7 @@ const About = () => {
           </p>
           <div className="grid grid-cols-2 gap-4">
             <Image
-              src="/images/user1.jpg"
+              src="/images/timeline1.jpg"
               alt="1:1 mentorship and gig review"
               width={500}
               height={500}
@@ -24,7 +24,7 @@ const About = () => {
               className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
             />
             <Image
-              src="https://assets.aceternity.com/templates/startup-2.webp"
+              src="/images/testimonial9.jpg"
               alt="Pricing strategy and positioning"
               width={500}
               height={500}
@@ -44,7 +44,7 @@ const About = () => {
           </p>
           <div className="grid grid-cols-2 gap-4">
             <Image
-              src="/images/user2.jpg"
+              src="/images/timeline4.jpg"
               alt="Course modules and lesson flow"
               width={500}
               height={500}
@@ -52,7 +52,7 @@ const About = () => {
               className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
             />
             <Image
-              src="https://assets.aceternity.com/features-section.png"
+              src="/images/testimonial6.jpg"
               alt="Strategies and playbooks library"
               width={500}
               height={500}
@@ -72,7 +72,7 @@ const About = () => {
           </p>
           <div className="grid grid-cols-2 gap-4">
             <Image
-              src="/images/user4.jpg"
+              src="/images/testimonial7.jpg"
               alt="Client outreach and proposal templates"
               width={500}
               height={500}
@@ -80,7 +80,7 @@ const About = () => {
               className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
             />
             <Image
-              src="https://assets.aceternity.com/features-section.png"
+              src="/images/timeline3.jpg"
               alt="Portfolio guidance and feedback"
               width={500}
               height={500}

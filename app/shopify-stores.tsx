@@ -7,28 +7,24 @@ import React, { useRef, useState } from "react";
 // (ensure domains are allowed in next.config.js images.remotePatterns if using poster images via <Image>).
 type StoreTestimonial = {
   videoSrc: string;
-  poster: string;
   quote: string;
   name: string;
 };
 
 const stores: StoreTestimonial[] = [
   {
-    videoSrc: "/videos/testomp-1.mp4", // <-- changed from /images/testomp-1.mp4
-    poster: "/images/testimonial.jpg",
+    videoSrc: "/images/testimony.mp4", // <-- changed from /images/testomp-1.mp4
     quote:
       "if you&apos;re a level 1 seller on fiverr there is a faster way to land orders. on Set Coach @Hon_Joshuaa explained this, i never knew this was possible, wow",
     name: "T.E",
   },
   {
-    videoSrc: "/videos/testimonial-2.mp4",
-    poster: "/images/testimonial3.jpg",
+    videoSrc: "/images/testimony5.mp4",
     quote: "This program was worth every penny!,",
     name: "H.S.M",
   },
   {
-    videoSrc: "/videos/testimonial-3.mp4",
-    poster: "/images/testimonial5.jpeg",
+    videoSrc: "/images/testimony6.mp4",
     quote:
       "Fiverr 1.0 changed my freelancing path. I was frustrated and doing it wrong; with clear strategies and mentorship, I doubled my income within months.",
     name: "a****10****E",
@@ -37,7 +33,6 @@ const stores: StoreTestimonial[] = [
 
 const VideoTestimonialCard: React.FC<StoreTestimonial> = ({
   videoSrc,
-  poster,
   quote,
   name,
 }) => {
@@ -62,7 +57,6 @@ const VideoTestimonialCard: React.FC<StoreTestimonial> = ({
       <div className="relative w-[200px] sm:w-[220px] lg:w-[240px] aspect-square">
         <video
           ref={videoRef}
-          poster={poster}
           preload="metadata"
           controls={isPlaying}
           playsInline
@@ -132,7 +126,6 @@ const ShopifyStores = () => {
             <VideoTestimonialCard
               key={index}
               videoSrc={store.videoSrc}
-              poster={store.poster}
               quote={store.quote}
               name={store.name}
             />
