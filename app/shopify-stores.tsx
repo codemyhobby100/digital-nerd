@@ -118,7 +118,7 @@ const ShopifyStores = () => {
   return (
     <section className="mt-10 md:py-10 bg-[#f6f5f4] w-full rounded-3xl">
       <div className="p-4 mx-auto relative z-10 w-full">
-        <div className="text-4xl py-10 md:pb-8 md:text-7xl text-center bg-clip-text text-transparent bg-gradient-to-b from-green-600 to-gray-800 bg-opacity-50">
+        <div className="text-4xl py-10 md:pb-8 md:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-b from-green-600 to-gray-800 bg-opacity-50">
           Success stories from <br/> Members Themselves.  
         </div>
 

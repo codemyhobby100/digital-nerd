@@ -96,7 +96,7 @@ const Pricing = () => {
     <div className="w-full md:items-center md:justify-center antialiased bg-grid-white/[0.02] relative overflow-hidden">
       <div className="flex items-center justify-center flex-col">
 
-      <div className="text-4xl pb-5 md:text-7xl text-center bg-clip-text text-transparent bg-gradient-to-b from-green-500 to-neutral-50 bg-opacity-50 mt-20">
+      <div className="text-4xl pb-5 md:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-b from-green-500 to-neutral-50 bg-opacity-50 mt-20">
           One‑on‑One Freelancing <br /> Programs
         </div>
         <p className="mt-2 mb-4 text-lg font-normal text-neutral-300 text-center mx-auto px-4 md:px-6 lg:px-10">
