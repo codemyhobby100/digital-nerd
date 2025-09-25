@@ -34,7 +34,7 @@ const plans: Plan[] = [
       "Business growth foundations",
       "Marketing your services",
     ],
-    cta: { label: "Start One‑on‑One", href: "/buy?plan=freelancing-basics" },
+    cta: { label: "Enroll Now", href: "/buy?plan=freelancing-basics" },
   },
   {
     key: "fiverr-guide",
@@ -50,7 +50,7 @@ const plans: Plan[] = [
       "Profitable side gigs",
       "Buyer–seller interactions (upselling)",
     ],
-    cta: { label: "Enroll on Fiverr Guide", href: "/buy?plan=fiverr-guide" },
+    cta: { label: "Enroll Now", href: "/buy?plan=fiverr-guide" },
   },
   {
     key: "upwork-guide",
@@ -66,7 +66,7 @@ const plans: Plan[] = [
       "Targeted pitching",
       "Proposal frameworks",
     ],
-    cta: { label: "Enroll on Upwork Guide", href: "/buy?plan=upwork-guide" },
+    cta: { label: "Enroll Now", href: "/buy?plan=upwork-guide" },
   },
   // Combo plan removed
 ];

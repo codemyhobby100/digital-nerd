@@ -10,7 +10,7 @@ const Services = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-white"></div>
       
       <div className="max-w-5xl mx-auto py-20 relative z-10">
-        <div className="text-4xl pb-5 md:text-7xl text-center bg-clip-text text-transparent bg-gradient-to-b from-green-600 to-gray-800 font-bold mt-20">
+        <div className="text-3xl pb-5 md:text-7xl text-center bg-clip-text text-transparent bg-gradient-to-b from-green-600 to-gray-800 mt-20">
           What to Expect in the Program
         </div>
         <p className="mt-4 text-lg font-normal text-gray-600 text-center mx-auto px-4 md:px-6 lg:px-10 max-w-3xl">

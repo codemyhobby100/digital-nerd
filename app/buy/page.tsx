@@ -27,12 +27,18 @@ const GetCourse = (props: Props) => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
+      const payload = {
+        ...formData,
+        // Default a payment method if none selected so users can enroll smoothly
+        paymentMethod: formData.paymentMethod || "FLUTTERWAVE",
+      };
+
       const response = await fetch("/api/buy-course", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify(payload)
       });
 
       if (!response.ok) {
@@ -46,12 +52,17 @@ const GetCourse = (props: Props) => {
       console.error(err);
     }
   };
+
+  // Updated features from reference
   const features = [
-    "Detailed Training",
-    "Integration & ​Payment System",
-    "Ads Setup & M​arketing",
-    "Mentorship",
-    "Exclusive Mastermind ​Community"
+    "Freelancing basics",
+    "Freelancing overview",
+    "Managing orders and delivery",
+    "Creating a niche-based profile",
+    "Grow your freelance business",
+    "Marketing your service as a freelancer",
+    "LinkedIn profile optimization",
+    "Job scraping and applying techniques"
   ];
 
   return (
@@ -63,16 +74,20 @@ const GetCourse = (props: Props) => {
             <Image
               priority
               src="/images/banner5.jpg"
-              alt="logo"
+              alt="Course banner"
               width={500}
               height={500}
               className="rounded-2xl"
             />
-            <h1 className="text-4xl mb-4 mt-5 text-white ">
-              Fiverr Income 2.0
+            {/* Title and short program descriptor */}
+            <h1 className="text-4xl mb-2 mt-5 text-white">
+              Course
             </h1>
+            <p className="text-sm text-gray-300 mb-4">
+              One-on-one freelancing programs
+            </p>
+
             <span className="flex items-center space-x-4 pb-3">
-              
               {/* <h2 className="text-green-500 text-2xl line-through">$49.99</h2> */}
               <h2 className="text-white text-2xl">N30,000</h2>
               <div>
@@ -86,10 +101,12 @@ const GetCourse = (props: Props) => {
                 </button>
               </div>
             </span>
+
+            {/* Short value proposition from reference */}
             <p className="text-lg mb-6 text-gray-200">
-              Our Shopify Master Course provides essential training to equip you
-              with the tools and knowledge needed to succeed in dropshipping
+              Build skills, get clients and grow your income.
             </p>
+
             <ul>
               {features.map((feature) => (
                 <li
@@ -102,16 +119,18 @@ const GetCourse = (props: Props) => {
               ))}
             </ul>
           </div>
+
           <div>
             <form onSubmit={handleSubmit} className="space-y-4">
               <h4 className="mt-2 text-white text-4xl capitalize">
-                Kindly enter you details below
+                Kindly enter your details below
               </h4>
+
               <label
                 className="inline-block text-lg pt-4 text-white "
                 htmlFor="name"
               >
-                Enter you name
+                Enter your name
               </label>
               <input
                 type="text"
@@ -124,11 +143,12 @@ const GetCourse = (props: Props) => {
                 required
                 className="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 text-white"
               />
+
               <label
                 className="inline-block text-lg pt-4 text-white "
                 htmlFor="email"
               >
-                Enter you email
+                Enter your email
               </label>
               <input
                 type="email"
@@ -140,10 +160,12 @@ const GetCourse = (props: Props) => {
                 required
                 className="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 text-white"
               />
+
+              {/* Payment selection can be re-enabled later if needed */}
               {/* <label className="inline-block text-lg pt-4 text-white ">
                 Select a payment method
-              </label> */}
-              {/* <div className="flex justify-around gap-4 mb-6">
+              </label>
+              <div className="flex justify-around gap-4 mb-6">
                 <div
                   onClick={() => handlePaymentMethodSelect("FLUTTERWAVE")}
                   className={`p-4 rounded-lg bg-gray-800 border border-gray-700 text-center cursor-pointer w-full ${
@@ -169,20 +191,20 @@ const GetCourse = (props: Props) => {
                 >
                   <img
                     src="/images/crypto-3.png"
-                    alt="Non-Payment"
+                    alt="Cryptocurrency"
                     className="w-12 h-12 mx-auto mb-2"
                   />
                   <p className="text-white">Cryptocurrency</p>
                 </div>
               </div> */}
+
               <button
-                disabled={
-                  !formData.paymentMethod || !formData.name || !formData.email
-                }
+                // Allow enroll without explicit payment choice; defaults inside handleSubmit
+                disabled={!formData.name || !formData.email}
                 type="submit"
                 className="w-full p-3 rounded-lg bg-blue-600 hover:bg-blue-700 text-white disabled:opacity-35"
               >
-                Buy Course
+                Enroll Now
               </button>
             </form>
           </div>
