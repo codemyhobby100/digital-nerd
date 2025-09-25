@@ -15,6 +15,7 @@ import ShopifyStores from "./shopify-stores";
 import Pricing from "./pricing";
 import Brands from "./brands";
 import Services from "./services";
+import Mistake from "./mistake";
 import FAQS from "./faq";
 import Footer from "./footer";
 import { InfiniteMovingCardsDemo } from "./snippets/infinite-moving-card-snippet";
@@ -315,11 +316,19 @@ export default function Home() {
               <Pricing />
             </motion.div>
           </div>
+          
 
           <motion.div {...sectionProps}>
             <InfiniteMovingCardsDemo />
           </motion.div>
         </div>
+
+       {/* Mistake Section - Full width white background */}
+        <div id="mistake">
+          <motion.div {...sectionProps}>
+            <Mistake />
+          </motion.div>
+        </div>        
 
         {/* FAQ Section - Full width white background */}
         <div ref={faqRef}>

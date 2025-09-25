@@ -44,11 +44,14 @@ const plans: Plan[] = [
     duration: "2 months",
     features: [
       "Fiverr fundamentals",
-      "Standard account setup",
-      "Market evaluation",
-      "Ranking & sales strategies",
-      "Profitable side gigs",
-      "Buyer–seller interactions (upselling)",
+      "Creation of a standard Fiverr account",
+      "Fiverr market evaluation",
+      "Srtrategies to rank and make sales",
+      "How to evaluate profitable side gigs to earn from",
+      "Buyer to seller interactions (upselling techniques)",
+      "Job outsourcing techniques",
+      "Fiverr payment methods",
+      "Questions and answers",
     ],
     cta: { label: "Enroll Now", href: "/buy?plan=fiverr-guide" },
   },
@@ -60,15 +63,32 @@ const plans: Plan[] = [
     duration: "2 months",
     features: [
       "Upwork overview",
-      "Profile creation",
-      "Profile optimization",
-      "Algorithm‑friendly practices",
-      "Targeted pitching",
-      "Proposal frameworks",
+      "How to create a profile",
+      "How to optimize your Upwork profile",
+      "Hacking the Upwork algorithm",
+      "Pitch to target driven jobs",
+      "Upwork proposal hack",
+      "Upwork payment methods",
+      "Questions and answers",
     ],
     cta: { label: "Enroll Now", href: "/buy?plan=upwork-guide" },
   },
-  // Combo plan removed
+  {
+    key: "combo-guide",
+    name: "Combo Guide",
+    type: "one-on-one",
+    price: { usd: "$150", ngn: "₦150k" },
+    duration: "3 months",
+    features: [
+      "All features from Fiverr & Upwork Guides",
+      "Dedicated portfolio review session",
+      "Advanced client acquisition strategies",
+      "Long-term freelancing career planning",
+      "Cross-platform profile synergy",
+      "Priority support",
+    ],
+    cta: { label: "Get Best Value", href: "/buy?plan=combo-guide" },
+  },
 ];
 
 const Pricing = () => {
@@ -83,11 +103,15 @@ const Pricing = () => {
           Build skills, get clients, and grow your income.
         </p>
 
-        <div className="grid gap-6 px-6 md:w-4/5 2xl:w-3/4 cursor-pointer pb-20 items-start grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 px-6 md:w-11/12 2xl:w-5/6 cursor-pointer pb-20 items-start grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
           {plans.map((plan) => (
             <div
               key={plan.key}
-              className="h-full flex flex-col justify-between border border-neutral-800/60 rounded-3xl p-6 bg-black/20"
+              className={`h-full flex flex-col justify-between border rounded-3xl p-6 bg-black/20 ${
+                plan.key === "combo-guide"
+                  ? "border-emerald-500/80 ring-2 ring-emerald-500/20"
+                  : "border-neutral-800/60"
+              }`}
             >
               <div className="rounded-3xl">
                 <div className="mb-3 flex items-center gap-3">
@@ -97,6 +121,11 @@ const Pricing = () => {
                   {plan.duration && (
                     <span className="text-xs px-2 py-1 rounded-full bg-neutral-800/70 text-neutral-300">
                       {plan.duration}
+                    </span>
+                  )}
+                  {plan.key === "combo-guide" && (
+                    <span className="text-xs px-2 py-1 rounded-full bg-emerald-500/20 text-emerald-400">
+                      Best Value
                     </span>
                   )}
                 </div>
@@ -132,7 +161,11 @@ const Pricing = () => {
                 {/* Uniform button color across all plans */}
                 <Link
                   href={plan.cta.href}
-                  className="rounded-3xl my-1 py-2 text-white w-full mx-auto items-center flex justify-center bg-gradient-to-r from-emerald-500 to-green-400 hover:from-emerald-600 hover:to-green-500 transition-colors"
+                  className={`rounded-3xl my-1 py-2 text-white w-full mx-auto items-center flex justify-center transition-colors ${
+                    plan.key === "combo-guide"
+                      ? "bg-gradient-to-r from-emerald-500 to-green-400 hover:from-emerald-600 hover:to-green-500"
+                      : "bg-neutral-800 hover:bg-neutral-700"
+                  }`}
                 >
                   {plan.cta.label}
                 </Link>
