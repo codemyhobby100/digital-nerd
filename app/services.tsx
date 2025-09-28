@@ -26,7 +26,7 @@ const Services = () => {
               Ready to Transform Your Skills into Income?
             </h3>
             <p className="text-gray-600 text-lg">
-              Join thousands of creators who have already started their journey to financial freedom through digital skills.
+              Join over 300 creators & freelancers to learn the deep secrets of the digital space.
             </p>
           </div>
           

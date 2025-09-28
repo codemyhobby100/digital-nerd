@@ -1,7 +1,15 @@
 import { HoverEffect } from "@/components/ui/card-hover-effect";
-import { PiAppStoreLogo, PiHeadsetFill, PiLock, PiMegaphone, PiMonitor, PiStorefront,PiChalkboardTeacherLight } from "react-icons/pi";
-import { FaRegMoneyBillAlt } from "react-icons/fa";
-import { MdOutlineAdminPanelSettings } from "react-icons/md";
+import {
+  PiListChecks,
+  PiCopy,
+  PiPresentationChart,
+  PiHeadset,
+  PiTrophy,
+  PiBookOpen,
+  PiStudent,
+  PiChartLineUp,
+  PiUsersThree,
+} from "react-icons/pi";
 
 
 export function CardHoverEffectDemo() {
@@ -13,33 +21,48 @@ export function CardHoverEffectDemo() {
 }
 export const projects = [
     {
-        icon : <div className="bg-green-100 p-4 rounded-full"><PiStorefront className="w-8 h-8 text-green-600" /></div>,
-        title: "Daily Action Plans",
-        description: "Get specific, actionable tasks that move you closer to your first client every single day.",
+        icon : <div className="bg-green-100 p-4 rounded-full"><PiListChecks className="w-8 h-8 text-green-600" /></div>,
+        title: "Daily Action Plan",
+        description: "Receive daily, actionable tasks designed to move you closer to landing your first client.",
     },
     {
-        icon : <div className="bg-green-100 p-4 rounded-full"><FaRegMoneyBillAlt className="w-8 h-8 text-green-600" /></div>,
+        icon : <div className="bg-green-100 p-4 rounded-full"><PiCopy className="w-8 h-8 text-green-600" /></div>,
         title: "Premium Templates",
-        description: "Access proven proposals, contracts, and outreach scripts that convert prospects into paying clients.",
+        description: "Access proven proposals, contracts, and outreach scripts to convert prospects into paying clients.",
     },
     {
-        icon : <div className="bg-green-100 p-4 rounded-full"><PiMegaphone className="w-8 h-8 text-green-600" /></div>,
-        title: "Live Workshops",
-        description: "Weekly sessions on branding, pricing, client acquisition, and scaling your freelance business.",
+        icon : <div className="bg-green-100 p-4 rounded-full"><PiPresentationChart className="w-8 h-8 text-green-600" /></div>,
+        title: "Live Workshop",
+        description: "Join weekly sessions on branding, pricing, client acquisition, and scaling your freelance business.",
     },
     {
-        icon : <div className="bg-green-100 p-4 rounded-full"><MdOutlineAdminPanelSettings className="w-8 h-8 text-green-600" /></div>,
-        title: "Community Support",
-        description: "Connect with fellow creators, get feedback on your work, and celebrate wins together.",
+        icon : <div className="bg-green-100 p-4 rounded-full"><PiHeadset className="w-8 h-8 text-green-600" /></div>,
+        title: "Active Support & Conversation",
+        description: "Get your questions answered and engage in valuable conversations with our active community and support team.",
     },
     {
-        icon : <div className="bg-green-100 p-4 rounded-full"><PiChalkboardTeacherLight className="w-8 h-8 text-green-600" /></div>,
-        title: "Quick Wins Challenges",
-        description: "30-day challenges designed to help you land your first client or increase your rates.",
+        icon : <div className="bg-green-100 p-4 rounded-full"><PiTrophy className="w-8 h-8 text-green-600" /></div>,
+        title: "Quick Win Challenge",
+        description: "Participate in challenges designed to help you land your first client or increase your rates quickly.",
     },
     {
-        icon : <div className="bg-green-100 p-4 rounded-full"><PiHeadsetFill className="w-8 h-8 text-green-600" /></div>,
-        title: "Growth Accountability",
-        description: "Weekly check-ins and progress tracking to keep you motivated and on track.",
+        icon : <div className="bg-green-100 p-4 rounded-full"><PiBookOpen className="w-8 h-8 text-green-600" /></div>,
+        title: "Educational Resource",
+        description: "Access a library of curated resources, guides, and tools to accelerate your learning and growth.",
+    },
+    {
+        icon : <div className="bg-green-100 p-4 rounded-full"><PiStudent className="w-8 h-8 text-green-600" /></div>,
+        title: "Free Skill Acquisition",
+        description: "Learn new, in-demand digital skills for free to expand your service offerings and income potential.",
+    },
+    {
+        icon : <div className="bg-green-100 p-4 rounded-full"><PiChartLineUp className="w-8 h-8 text-green-600" /></div>,
+        title: "Free Forex Signals",
+        description: "Receive timely and potentially profitable Forex trading signals at no extra cost.",
+    },
+    {
+        icon : <div className="bg-green-100 p-4 rounded-full"><PiUsersThree className="w-8 h-8 text-green-600" /></div>,
+        title: "Learn From Others",
+        description: "Gain insights and inspiration from the experiences and success stories of other community members.",
     }
 ];

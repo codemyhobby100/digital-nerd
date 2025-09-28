@@ -51,6 +51,15 @@ const FAQS = () => {
               Any digital skill! Design, writing, coding, marketing, video editing, social media management—if it can be done remotely, we can help you monetize it.
             </AccordionContent>
           </AccordionItem>
+
+          <AccordionItem value="item-5">
+            <AccordionTrigger className="text-left text-lg md:text-xl">
+              Why should I not sign in?
+            </AccordionTrigger>
+            <AccordionContent className="text-left text-lg md:text-xl">
+              If you have an active system that gives you more than 10 leads a day, then this is not for you.
+            </AccordionContent>
+          </AccordionItem>
         </Accordion>
       </div>
     </div>

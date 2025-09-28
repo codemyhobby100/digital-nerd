@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useRef, useState } from "react";
+import Image from "next/image";
 
 // Update video/poster paths per testimonial below.
 // Place files in public/videos/... and public/images/... or use remote URLs
@@ -31,6 +32,31 @@ const stores: StoreTestimonial[] = [
   },
 ];
 
+type ImageTestimonial = {
+  imageSrc: string;
+  alt: string;
+};
+
+const imageTestimonials: ImageTestimonial[] = [
+  {
+    imageSrc: "/images/testimonial6.jpg",
+    alt: "Testimonial from a happy member.",
+  },
+  {
+    imageSrc: "/images/testimonial7.jpg",
+    alt: "Testimonial from a happy member.",
+  },
+  {
+    imageSrc: "/images/testimonial8.jpg",
+    alt: "Testimonial from a happy member.",
+  },
+  {
+    imageSrc: "/images/testimonial9.jpg",
+    alt: "Testimonial from a happy member.",
+  },
+];
+
+
 const VideoTestimonialCard: React.FC<StoreTestimonial> = ({
   videoSrc,
   quote,
@@ -54,7 +80,7 @@ const VideoTestimonialCard: React.FC<StoreTestimonial> = ({
 
   return (
     <div className="flex flex-col items-center justify-start">
-      <div className="relative w-[200px] sm:w-[220px] lg:w-[240px] aspect-square">
+      <div className="relative w-[240px] sm:w-[280px] lg:w-[320px] aspect-square">
         <video
           ref={videoRef}
           preload="metadata"
@@ -108,6 +134,25 @@ const VideoTestimonialCard: React.FC<StoreTestimonial> = ({
   );
 };
 
+const ImageTestimonialCard: React.FC<ImageTestimonial> = ({
+  imageSrc,
+  alt,
+}) => {
+  return (
+    <div className="group relative aspect-square w-full h-auto rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+      <div className="relative w-full h-full">
+        <Image
+          src={imageSrc}
+          alt={alt}
+          layout="fill"
+          objectFit="cover"
+          className="transition-transform duration-500 group-hover:scale-110"
+        />
+      </div>
+    </div>
+  );
+};
+
 const ShopifyStores = () => {
   return (
     <section className="mt-10 md:py-10 bg-[#f6f5f4] w-full rounded-3xl">
@@ -131,6 +176,24 @@ const ShopifyStores = () => {
             />
           ))}
         </div>
+
+        {/* Image Testimonials Section */}
+        <div className="text-3xl pt-16 md:text-5xl text-center bg-clip-text text-transparent bg-gradient-to-b from-green-600 to-gray-800 bg-opacity-50">
+          And More...
+        </div>
+
+        <div className="max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 px-6 md:px-10 mt-8">
+            {imageTestimonials.map((testimonial, index) => (
+              <ImageTestimonialCard
+                key={index}
+                imageSrc={testimonial.imageSrc}
+                alt={testimonial.alt}
+              />
+            ))}
+          </div>
+        </div>
+
 
         {/* CTA Button */}
         <div className="flex justify-center mt-10">

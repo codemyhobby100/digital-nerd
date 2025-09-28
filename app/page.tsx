@@ -20,7 +20,8 @@ import FAQS from "./faq";
 import Footer from "./footer";
 import { InfiniteMovingCardsDemo } from "./snippets/infinite-moving-card-snippet";
 import { AnimatedTooltip } from "./snippets/animated-tooltip";
-import { FaStar, FaTelegramPlane, FaWhatsapp } from "react-icons/fa";
+import { FaInstagram, FaStar, FaTelegramPlane, FaWhatsapp } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import Head from "next/head";
 import { motion } from "framer-motion";
 
@@ -83,7 +84,7 @@ export default function Home() {
 
   // Prefer Lenis for programmatic scrolling (avoid native 'smooth' behavior)
   const scrollToAbout = () => {
-    if (AboutnRef.current) lenis.current?.scrollTo(AboutnRef.current);
+    lenis.current?.scrollTo(0, { duration: 1.5 });
   };
 
   const scrollToShopifyStores = () => {
@@ -195,7 +196,7 @@ export default function Home() {
                 {/* Main CTA */}
                 <div className="mb-4 sm:mb-5">
                   <Link
-                    href={"/buy"}
+                    href={"/"}
                     className="inline-flex items-center justify-center bg-white text-black font-semibold rounded-full px-6 py-2.5 text-sm hover:bg-gray-100 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
                   >
                     Join Private Community
@@ -210,20 +211,38 @@ export default function Home() {
                       href={"https://chat.whatsapp.com/CgebHVjItg61r8nfDxQSzl"}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center bg-neutral-800 hover:bg-neutral-700 rounded-full px-4 py-2 text-sm text-white transition-all duration-200 border border-neutral-700 hover:border-neutral-600"
+                      className="inline-flex items-center justify-center bg-neutral-800 hover:bg-neutral-700 rounded-full h-10 w-10 text-white transition-all duration-200 border border-neutral-700 hover:border-neutral-600"
+                      aria-label="WhatsApp"
                     >
-                      <FaWhatsapp className="mr-2 text-green-400" />
-                      WhatsApp
+                      <FaWhatsapp className="text-xl text-neutral-400 group-hover:text-white" />
                     </Link>
                     <Link
                       href={"https://t.me/DigitalNerdHQ"}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center bg-neutral-800 hover:bg-neutral-700 rounded-full px-4 py-2 text-sm text-white transition-all duration-200 border border-neutral-700 hover:border-neutral-600"
+                      className="inline-flex items-center justify-center bg-neutral-800 hover:bg-neutral-700 rounded-full h-10 w-10 text-white transition-all duration-200 border border-neutral-700 hover:border-neutral-600"
+                      aria-label="Telegram"
                     >
-                      <FaTelegramPlane className="mr-2 text-blue-400" />
-                      Telegram
+                      <FaTelegramPlane className="text-xl text-neutral-400 group-hover:text-white" />
                     </Link>
+                    <a
+                      href="https://www.instagram.com/digitalnerdhq?igsh=ZG1uNGprNG5sM2lv&utm_source=qr"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center bg-neutral-800 hover:bg-neutral-700 rounded-full h-10 w-10 text-white transition-all duration-200 border border-neutral-700 hover:border-neutral-600 group"
+                      aria-label="Instagram"
+                    >
+                      <FaInstagram className="text-xl text-neutral-400 group-hover:text-white" />
+                    </a>
+                    <a
+                      href="https://x.com/digitalnerdhq?s=21"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center bg-neutral-800 hover:bg-neutral-700 rounded-full h-10 w-10 text-white transition-all duration-200 border border-neutral-700 hover:border-neutral-600 group"
+                      aria-label="X"
+                    >
+                      <FaXTwitter className="text-lg text-neutral-400 group-hover:text-white" />
+                    </a>
                   </div>
                 </div>
               </motion.div>

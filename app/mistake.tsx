@@ -14,20 +14,20 @@ export default function Mistake() {
     },
     {
       icon: FaLink,
-      title: "Poor Proposals",
-      description: "They send proposals that will never get seen",
+      title: "Generic Proposals & Gig Descriptions",
+      description: "Copy-pasting the same pitch to every client instead of tailoring proposals.",
       number: "02",
     },
     {
       icon: FaDollarSign,
-      title: "Wrong Pricing",
-      description: "Their Pricing and Offer is turning Clients Away",
+      title: "Poor Communication & Delivery",
+      description: "Delaying responses to client messages focusing on chasing clients and not attracting them.",
       number: "03",
     },
     {
       icon: FaUserFriends,
-      title: "Wrong Approach",
-      description: "They focus on chasing Clients and not Attracting them",
+      title: "Undervaluing or Overpricing Services",
+      description: "Setting prices too low in a bid to attract clients, which signals inexperience.",
       number: "04",
     },
   ];
@@ -55,7 +55,7 @@ export default function Mistake() {
           >
             Top 4 Mistakes <br />
             <span className="md:text-5xl text-3xl block font-medium">
-              Freelancers make on Upwork
+              Freelancers make on Freelancing Platforms
             </span>
           </motion.h1>
 

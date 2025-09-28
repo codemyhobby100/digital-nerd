@@ -262,7 +262,7 @@ const ContactPage: React.FC = () => {
                     Need immediate assistance? Chat with our support bot on Telegram for quick responses.
                   </p>
                   <a
-                    href={telegramBotLink}
+                    href="https://t.me/Digitalnerdhqchat_bot"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center bg-neutral-50 text-neutral-900 px-4 py-2 rounded-md font-medium hover:bg-neutral-200 transition duration-200"
