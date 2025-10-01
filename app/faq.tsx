@@ -12,7 +12,7 @@ const FAQS = () => {
         <div className="text-3xl md:text-7xl font-bold text-black">
           Have questions?
         </div>
-        <div className="font-semibold text-3xl md:text-6xl text-gradient bg-gradient-to-r from-emerald-600 to-blue-300 bg-clip-text text-transparent">
+        <div className="font-semibold text-3xl md:text-6xl text-gradient bg-gradient-to-r from-red-600 to-blue-300 bg-clip-text text-transparent">
           Get answers.
         </div>
         <Accordion type="single" collapsible>

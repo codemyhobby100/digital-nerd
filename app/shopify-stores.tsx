@@ -102,21 +102,21 @@ const VideoTestimonialCard: React.FC<StoreTestimonial> = ({
             aria-label="Play testimonial video"
             title="Play"
             onClick={handlePlayClick}
-            className="absolute inset-0 grid place-items-center bg-black/25 backdrop-blur-[1px] rounded-lg transition-opacity"
+            className="absolute inset-0 grid place-items-center bg-[#060312]/[0.96] backdrop-blur-[1px] rounded-lg transition-opacity"
           >
             <span className="relative inline-flex h-16 w-16 items-center justify-center">
               {/* animated green rings */}
-              <span className="absolute inset-0 rounded-full bg-emerald-400/25 blur-md opacity-70 animate-pulse" />
-              <span className="absolute -inset-2 rounded-full bg-emerald-400/15 animate-ping" />
+              <span className="absolute inset-0 rounded-full bg-red-400/25 blur-md opacity-70 animate-pulse" />
+              <span className="absolute -inset-2 rounded-full bg-red-400/15 animate-ping" />
               {/* core white button */}
-              <span className="relative z-10 inline-flex h-16 w-16 items-center justify-center rounded-full bg-white shadow-xl ring-2 ring-emerald-400/60 transition-transform duration-200 hover:scale-105">
+              <span className="relative z-10 inline-flex h-16 w-16 items-center justify-center rounded-full bg-white shadow-xl ring-2 ring-red-400/60 transition-transform duration-200 hover:scale-105">
                 {/* green play icon */}
                 <svg
                   aria-hidden="true"
                   width="26"
                   height="26"
                   viewBox="0 0 24 24"
-                  className="translate-x-[1px] fill-emerald-500 drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)]"
+                  className="translate-x-[1px] fill-red-500 drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)]"
                 >
                   <path d="M8 5v14l11-7z" />
                 </svg>
@@ -157,7 +157,7 @@ const ShopifyStores = () => {
   return (
     <section className="mt-10 md:py-10 bg-[#f6f5f4] w-full rounded-3xl">
       <div className="p-4 mx-auto relative z-10 w-full">
-        <div className="text-4xl py-10 md:pb-8 md:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-b from-green-600 to-gray-800 bg-opacity-50">
+        <div className="text-4xl py-10 md:pb-8 md:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-b from-red-500 to-gray-700 bg-opacity-50">
           Success stories from <br/> Members Themselves.  
         </div>
 
@@ -178,7 +178,7 @@ const ShopifyStores = () => {
         </div>
 
         {/* Image Testimonials Section */}
-        <div className="text-3xl pt-16 md:text-5xl text-center bg-clip-text text-transparent bg-gradient-to-b from-green-600 to-gray-800 bg-opacity-50">
+        <div className="text-3xl pt-16 md:text-5xl text-center bg-clip-text text-transparent bg-gradient-to-b from-red-500 to-gray-700 bg-opacity-50">
           And More...
         </div>
 
@@ -199,7 +199,7 @@ const ShopifyStores = () => {
         <div className="flex justify-center mt-10">
           <button
             type="button"
-            className="px-8 py-4 rounded-full bg-gradient-to-r from-emerald-500 to-green-700 text-white font-bold text-xl shadow-lg hover:scale-105 transition-transform duration-200 ring-2 ring-emerald-400/60"
+            className="px-8 py-4 rounded-full bg-gradient-to-r from-red-500 to-red-700 text-white font-bold text-xl shadow-lg hover:scale-105 transition-transform duration-200 ring-2 ring-red-400/60"
           >
             Unlock Access
           </button>

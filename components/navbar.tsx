@@ -34,18 +34,17 @@ const Navbar = ({
     <div>
       <div className="p-6 md:p-10 flex items-center justify-between z-50">
         <div className="flex items-center">
-          <Image
+            <Image
             priority
             src="/images/logo.png"
             alt="Logo"
-            width={100}
-            height={100}
-            className="w-10 h-10 md:w-14 md:h-14"
+            width={160} 
+            height={80}  
+            className="w-32 h-20 md:w-40 md:h-20"  // Fine-tuned proportions
           />
-          <span className="text-white font-semibold text-[23px]">igitalNerd</span>
         </div>
         <div
-          className="cursor-pointer hidden md:flex space-x-10 items-center text-slate-300 text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to bg-neutral-400 bg-opacity-50"
+          className="cursor-pointer hidden md:flex space-x-10 items-center text-white text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to bg-neutral-400 bg-opacity-50"
         >
           <div onClick={scrollToAbout} className="hover:text-gray-50">
             About
@@ -66,7 +65,7 @@ const Navbar = ({
 
         <div className="flex md:hidden">
           {isDropDownVisible ? (
-            <div onClick={toggleDropDown} className="w-8 h-8 text-slate-300 cursor-pointer">
+            <div onClick={toggleDropDown} className="w-8 h-8 text-white cursor-pointer">
               <X />
               <DropDownMenu
                 onClose={closeDropDown}

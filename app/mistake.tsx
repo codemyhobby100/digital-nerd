@@ -67,7 +67,7 @@ export default function Mistake() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 * index }}
-                className="group relative flex flex-col bg-[#0a0b13]/80 rounded-xl overflow-hidden backdrop-blur-sm hover:shadow-2xl hover:shadow-emerald-500/10 transition-all duration-300"
+                className="group relative flex flex-col bg-[#0a0b13]/80 rounded-xl overflow-hidden backdrop-blur-sm hover:shadow-2xl hover:shadow-red-500/10 transition-all duration-300"
               >
                 {/* Number indicator */}
                 <div className="absolute -top-6 -left-6 w-16 h-16 bg-gradient-to-br from-neutral-900 to-neutral-800 rotate-12 flex items-end justify-end p-2 text-neutral-600 font-bold text-xl">
@@ -78,9 +78,9 @@ export default function Mistake() {
                   {/* Header with icon */}
                   <div className="flex items-center gap-4 mb-6">
                     <div className="relative">
-                      <div className="absolute inset-0 rounded-lg bg-emerald-500/20 blur-xl group-hover:bg-emerald-500/30 transition-colors duration-300" />
-                      <div className="relative p-3 rounded-lg bg-gradient-to-br from-neutral-900 to-neutral-800 border border-neutral-700/50 group-hover:border-emerald-500/50 transition-colors duration-300">
-                        <mistake.icon className="text-emerald-500 text-2xl md:text-3xl" />
+                      <div className="absolute inset-0 rounded-lg bg-red-500/20 blur-xl group-hover:bg-red-500/30 transition-colors duration-300" />
+                      <div className="relative p-3 rounded-lg bg-gradient-to-br from-neutral-900 to-neutral-800 border border-neutral-700/50 group-hover:border-red-500/50 transition-colors duration-300">
+                        <mistake.icon className="text-red-500 text-2xl md:text-3xl" />
                       </div>
                     </div>
                     <h3 className="text-xl font-semibold bg-gradient-to-r from-white to-neutral-300 bg-clip-text text-transparent">
@@ -94,12 +94,12 @@ export default function Mistake() {
                   </p>
 
                   {/* Decorative elements */}
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 rounded-full blur-3xl group-hover:bg-emerald-500/10 transition-colors duration-300" />
-                  <div className="absolute bottom-0 left-0 w-24 h-24 bg-emerald-500/5 rounded-full blur-2xl group-hover:bg-emerald-500/10 transition-colors duration-300" />
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-red-500/5 rounded-full blur-3xl group-hover:bg-red-500/10 transition-colors duration-300" />
+                  <div className="absolute bottom-0 left-0 w-24 h-24 bg-red-500/5 rounded-full blur-2xl group-hover:bg-red-500/10 transition-colors duration-300" />
                 </div>
 
                 {/* Bottom accent line */}
-                <div className="h-1 w-full bg-gradient-to-r from-transparent via-emerald-500/20 to-transparent" />
+                <div className="h-1 w-full bg-gradient-to-r from-transparent via-red-500/20 to-transparent" />
               </motion.div>
             ))}
           </div>
@@ -113,7 +113,7 @@ export default function Mistake() {
           >
             <button
               type="button"
-              className="group px-8 py-4 rounded-full bg-gradient-to-r from-emerald-500 to-green-700 text-white font-bold text-xl shadow-lg hover:shadow-emerald-500/25 hover:scale-105 transition-all duration-200 ring-2 ring-emerald-400/60 flex items-center gap-2"
+              className="group px-8 py-4 rounded-full bg-gradient-to-r from-red-500 to-red-700 text-white font-bold text-xl shadow-lg hover:shadow-red-500/25 hover:scale-105 transition-all duration-200 ring-2 ring-red-400/60 flex items-center gap-2"
             >
               Unlock Access
               <svg 

@@ -9,16 +9,15 @@ import { RiTwitterXFill } from "react-icons/ri";
 const Footer = () => {
   return (
     <footer className='flex flex-col md:flex-row justify-between items-center p-4 mt-4'>
-    <div className='flex items-center mb-4 md:mb-0'>
-      <Image
+    <div className="flex items-center">
+        <Image
         priority
         src="/images/logo.png"
         alt="Logo"
-        width={100}
-        height={100}
-        className="w-10 h-10 md:w-14 md:h-14"
+        width={160} 
+        height={80}  
+        className="w-32 h-20 md:w-40 md:h-20"  // Fine-tuned proportions
       />
-      <span className='text-white font-semibold text-[23px]'>igital Nerd</span>
     </div>
     <div className='flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4'>
       <Link href="/" className='text-white'>Privacy Policy</Link>

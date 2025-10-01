@@ -96,7 +96,7 @@ const Pricing = () => {
     <div className="w-full md:items-center md:justify-center antialiased bg-grid-white/[0.02] relative overflow-hidden">
       <div className="flex items-center justify-center flex-col">
 
-      <div className="text-4xl pb-5 md:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-b from-green-500 to-neutral-50 bg-opacity-50 mt-20">
+      <div className="text-4xl pb-5 md:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-b from-red-500 to-neutral-50 bg-opacity-50 mt-20">
           One‑on‑One Freelancing <br /> Programs
         </div>
         <p className="mt-2 mb-4 text-lg font-normal text-neutral-300 text-center mx-auto px-4 md:px-6 lg:px-10">
@@ -107,9 +107,9 @@ const Pricing = () => {
           {plans.map((plan) => (
             <div
               key={plan.key}
-              className={`h-full flex flex-col justify-between border rounded-3xl p-6 bg-black/20 ${
+              className={`h-full flex flex-col justify-between border rounded-3xl p-6 bg-[#060312]/[0.96] ${
                 plan.key === "combo-guide"
-                  ? "border-emerald-500/80 ring-2 ring-emerald-500/20"
+                  ? "border-red-500/80 ring-2 ring-red-500/20"
                   : "border-neutral-800/60"
               }`}
             >
@@ -124,7 +124,7 @@ const Pricing = () => {
                     </span>
                   )}
                   {plan.key === "combo-guide" && (
-                    <span className="text-xs px-2 py-1 rounded-full bg-emerald-500/20 text-emerald-400">
+                    <span className="text-xs px-2 py-1 rounded-full bg-red-500/20 text-red-400">
                       Best Value
                     </span>
                   )}
@@ -141,7 +141,6 @@ const Pricing = () => {
                     {plan.price.ngn && <span>{plan.price.ngn}</span>}
                   </div>
                 )}
-
                 {/* Description removed */}
 
                 <ul className="mt-4">
@@ -150,7 +149,7 @@ const Pricing = () => {
                       key={feature}
                       className="text-base py-2 flex space-x-2 items-start text-neutral-200"
                     >
-                      <MdCheckCircleOutline className="text-green-500 mr-2 mt-0.5 text-xl shrink-0" />
+                      <MdCheckCircleOutline className="text-red-500 mr-2 mt-0.5 text-xl shrink-0" />
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -163,7 +162,7 @@ const Pricing = () => {
                   href={plan.cta.href}
                   className={`rounded-3xl my-1 py-2 text-white w-full mx-auto items-center flex justify-center transition-colors ${
                     plan.key === "combo-guide"
-                      ? "bg-gradient-to-r from-emerald-500 to-green-400 hover:from-emerald-600 hover:to-green-500"
+                      ? "bg-gradient-to-r from-red-500 to-red-400 hover:from-red-600 hover:to-red-500"
                       : "bg-neutral-800 hover:bg-neutral-700"
                   }`}
                 >
