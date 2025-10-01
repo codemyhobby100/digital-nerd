@@ -2,17 +2,12 @@
 import { Analytics } from '@vercel/analytics/react';
 
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-// const font = Montserrat({
-//   subsets: ["latin"],
-//   weight: ["400", "700"],
-// });
-
-const font = Poppins(
+const font = Inter(
   { subsets: ["latin"],
-    weight: '400'
+    // You can specify weights here if needed, e.g., weight: ['400', '700']
 }
   );
 
