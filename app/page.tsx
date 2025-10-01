@@ -168,7 +168,7 @@ export default function Home() {
             <div className="space-y-4 sm:space-y-5 md:space-y-6 order-2 lg:order-1 px-2 sm:px-0">
               {/* Main Heading */}
               <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-[#f6f7f7] to-[#f6f7f7] bg-opacity-50 leading-tight">
-                Digitalnerd HQ
+                DigitalNerdHQ
               </div>
               
               {/* Subheading */}
