@@ -207,8 +207,18 @@ export default function Home() {
                 <div>
                   <p className="text-sm text-[#f6f7f7] mb-3">Or join our free communities</p>
                   <div className="flex gap-3">
-                    {/* Social Icons - Keep existing styling */}
-                    {/* ... existing social icons ... */}
+                    <a href="#" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-neutral-800/80 flex items-center justify-center text-white hover:bg-neutral-700 hover:scale-110 transition-all duration-200">
+                      <FaWhatsapp size={22} />
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-neutral-800/80 flex items-center justify-center text-white hover:bg-neutral-700 hover:scale-110 transition-all duration-200">
+                      <FaTelegramPlane size={22} />
+                    </a>
+                    <a href="https://www.instagram.com/digitalnerdhq/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-neutral-800/80 flex items-center justify-center text-white hover:bg-neutral-700 hover:scale-110 transition-all duration-200">
+                      <FaInstagram size={22} />
+                    </a>
+                    <a href="https://x.com/DigitalNerdHQ" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-neutral-800/80 flex items-center justify-center text-white hover:bg-neutral-700 hover:scale-110 transition-all duration-200">
+                      <FaXTwitter size={22} />
+                    </a>
                   </div>
                 </div>
               </motion.div>
