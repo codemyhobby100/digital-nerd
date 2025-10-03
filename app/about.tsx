@@ -144,7 +144,7 @@ const About = () => {
   return (
     <div className="mt-20 px-4">
       <div className="text-3xl bg-gradient-to-b from-red-500 to-white bg-opacity-50 bg-clip-text text-transparent sm:text-5xl lg:text-6xl text-center mt-6 tracking-wide">
-        What To Expect From <br /> Fiverr 3.0
+        What You&amos;ll Experience
       </div>
 
       {/* Existing section kept for reference
