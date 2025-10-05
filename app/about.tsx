@@ -1,20 +1,26 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { Timeline } from "@/components/ui/timeline";
+import { WaitlistModal } from "@/components/ui/waitlist-modal";
 
-const About = () => {
+interface AboutProps {
+  onWaitlistClick: () => void;
+}
+
+const About: React.FC<AboutProps> = ({ onWaitlistClick }) => {
+
   // Timeline content aligned with the section titles
   const data: { title: string; content: React.ReactNode }[] = [
     {
       title: "Expert Mentorship",
       content: (
         <div>
-          <p className="mb-8 text-xs font-normal text-white md:text-sm dark:text-neutral-200">
+          <p className="mb-4 text-xs font-normal text-white md:text-sm dark:text-neutral-200">
             Focused 1:1 guidance on gigs, positioning, pricing, and weekly action steps.
           </p>
-          <div className="grid max-w-sm grid-cols-2 gap-4">
+          <div className="grid max-w-sm grid-cols-2 gap-2">
             <Image
               src="/images/timeline1.jpg"
               alt="1:1 mentorship and gig review"
@@ -55,10 +61,10 @@ const About = () => {
       title: "In‑Depth Courses & Proven Strategies",
       content: (
         <div>
-          <p className="mb-8 text-xs font-normal text-white md:text-sm dark:text-neutral-200">
+          <p className="mb-4 text-xs font-normal text-white md:text-sm dark:text-neutral-200">
             Step‑by‑step gig playbooks: offers, keywords, pricing, proposals, delivery, and reviews.
           </p>
-          <div className="grid max-w-sm grid-cols-2 gap-4">
+          <div className="grid max-w-sm grid-cols-2 gap-2">
             <Image
               src="/images/timeline4.jpg"
               alt="Course modules and lesson flow"
@@ -102,7 +108,7 @@ const About = () => {
           <p className="mb-4 text-xs font-normal text-white md:text-sm dark:text-neutral-200">
             Outreach scripts, proposal reviews, portfolio polish, and live feedback to close clients.
           </p>
-          <div className="grid max-w-sm grid-cols-2 gap-4">
+          <div className="grid max-w-sm grid-cols-2 gap-2">
             <Image
               src="/images/testimonial7.jpg"
               alt="Client outreach and proposal templates"
@@ -142,44 +148,19 @@ const About = () => {
   ];
 
   return (
-    <div className="mt-20 px-4">
+    <div className="mt-12 px-4">
       <div className="text-3xl bg-gradient-to-b from-red-500 to-white bg-opacity-50 bg-clip-text text-transparent sm:text-5xl lg:text-6xl text-center mt-6 tracking-wide">
-        What You&amos;ll Experience
+        What You&apos;ll Experience
       </div>
-
-      {/* Existing section kept for reference
-        <div className="flex flex-wrap pt-8 justify-center">
-          <div className="p-2 w-full lg:w-1/2 flex justify-center">
-            <img
-              alt="phone"
-              src="/images/phone2.png"
-              className="max-w-full h-auto md:w-3/4 lg:w-full"
-            />
-          </div>
-          <div className="pt-12 w-full lg:w-1/2">
-            {checklistItems.map((item, index) => (
-              <div key={index} className="flex mb-12">
-                <div className="text-green-400 mx-6 h-10 w-10 flex justify-center items-center rounded-full">
-                  <MdCheckCircleOutline className="text-2xl" />
-                </div>
-                <div>
-                  <h5 className="mt-1 text-white mb-2 text-xl">{item.title}</h5>
-                  <p className="text-md text-neutral-500">{item.description}</p>
-                </div>
-              </div>
-            ))}
-            <Link
-              href={"/buy"}
-              className="cursor-pointer flex items-start justify-center border w-48 p-2 ml-0 my-6 text-white"
-            >
-              Get Course
-            </Link>
-          </div>
-        </div>
-        */}
 
       <div className="relative w-full overflow-clip mt-10">
         <Timeline data={data} />
+      </div>
+
+      <div className="text-center mt-16 mb-12 max-w-2xl mx-auto">
+        <p className="text-lg text-neutral-300 mb-4">Exciting things are coming. Our next-generation program, <span className="font-bold text-white">Freelance 3.0</span>, is in development.</p>
+        <p className="text-neutral-400 mb-8">Be the first to know when we launch and get exclusive early-bird access.</p>
+        <button onClick={onWaitlistClick} type="button" className="px-8 py-4 rounded-full bg-gradient-to-r from-red-500 to-red-700 text-white font-bold text-lg shadow-lg hover:scale-105 transition-transform duration-200 ring-2 ring-red-400/60">Join the Waitlist for 3.0</button>
       </div>
     </div>
     

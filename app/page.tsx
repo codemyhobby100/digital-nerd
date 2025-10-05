@@ -21,6 +21,7 @@ import Footer from "./footer";
 import { InfiniteMovingCardsDemo } from "./snippets/infinite-moving-card-snippet";
 import { AnimatedTooltip } from "./snippets/animated-tooltip";
 import { FaInstagram, FaStar, FaTelegramPlane, FaWhatsapp } from "react-icons/fa";
+import { WaitlistModal } from "@/components/ui/waitlist-modal";
 import { FaXTwitter } from "react-icons/fa6";
 import Head from "next/head";
 import { motion } from "framer-motion";
@@ -72,6 +73,10 @@ export default function Home() {
   const closeDropdown = () => {
     setDropdownVisible(false);
   };
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const handleWaitlistClick = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
   const AboutnRef = useRef<HTMLDivElement>(null);
   // const websiteDesignRef = useRef<HTMLDivElement>(null);
@@ -145,6 +150,7 @@ export default function Home() {
         <link rel="icon" href="/logo.png" />
         {/* You can add more metadata here if needed */}
       </Head>
+      <WaitlistModal isOpen={isModalOpen} onClose={closeModal} />
       <div className="w-full md:items-center md:justify-center bg-[#060312]/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
         <Navbar
           scrollToAbout={scrollToAbout}
@@ -290,7 +296,7 @@ export default function Home() {
         <div className="p-4 mx-auto relative z-10 w-full px-2">
           <div ref={AboutnRef}>
             <motion.div {...sectionProps}>
-              <About />
+              <About onWaitlistClick={handleWaitlistClick} />
             </motion.div>
           </div>
         </div>
