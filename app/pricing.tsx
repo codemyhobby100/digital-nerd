@@ -34,7 +34,7 @@ const plans: Plan[] = [
       "Business growth foundations",
       "Marketing your services",
     ],
-    cta: { label: "Enroll Now", href: "/buy?plan=freelancing-basics" },
+    cta: { label: "Enroll Now", href: "https://paystack.shop/pay/digitalnerdbasics" },
   },
   {
     key: "fiverr-guide",
@@ -53,7 +53,7 @@ const plans: Plan[] = [
       "Fiverr payment methods",
       "Questions and answers",
     ],
-    cta: { label: "Enroll Now", href: "/buy?plan=fiverr-guide" },
+    cta: { label: "Enroll Now", href: "https://paystack.shop/pay/digitalnerd-fiverrguide" },
   },
   {
     key: "upwork-guide",
@@ -71,7 +71,7 @@ const plans: Plan[] = [
       "Upwork payment methods",
       "Questions and answers",
     ],
-    cta: { label: "Enroll Now", href: "/buy?plan=upwork-guide" },
+    cta: { label: "Enroll Now", href: "https://paystack.shop/pay/digitalnerd-upworkguide" },
   },
   {
     key: "combo-guide",
@@ -87,7 +87,7 @@ const plans: Plan[] = [
       "Cross-platform profile synergy",
       "Priority support",
     ],
-    cta: { label: "Get Best Value", href: "/buy?plan=combo-guide" },
+    cta: { label: "Get Best Value", href: "https://paystack.shop/pay/digitalnerd-comboguide" },
   },
 ];
 
@@ -115,27 +115,27 @@ const Pricing = () => {
             >
               <div className="rounded-3xl">
                 <div className="mb-3 flex items-center gap-3">
-                  <span className="text-xs px-2 py-1 rounded-full bg-neutral-800/70 text-neutral-300">
+                  <span className="text-xs px-2 py-0.5 rounded-full bg-neutral-800/70 text-neutral-300">
                     {plan.type}
                   </span>
                   {plan.duration && (
-                    <span className="text-xs px-2 py-1 rounded-full bg-neutral-800/70 text-neutral-300">
+                    <span className="text-xs px-2 py-0.5 rounded-full bg-neutral-800/70 text-neutral-300">
                       {plan.duration}
                     </span>
                   )}
                   {plan.key === "combo-guide" && (
-                    <span className="text-xs px-2 py-1 rounded-full bg-red-500/20 text-red-400">
+                    <span className="text-xs px-2 py-0.5 rounded-full bg-red-500/20 text-red-400">
                       Best Value
                     </span>
                   )}
                 </div>
 
-                <div className="text-3xl md:text-3xl font-semibold bg-clip-text text-transparent bg-gradient-to-b from-neutral-300 to-neutral-50">
+                <div className="text-2xl font-semibold bg-clip-text text-transparent bg-gradient-to-b from-neutral-300 to-neutral-50">
                   {plan.name}
                 </div>
 
                 {(plan.price.ngn || plan.price.usd) && (
-                  <div className="text-xl pt-3 text-neutral-200">
+                  <div className="text-sm pt-1 text-neutral-200">
                     {plan.price.usd && <span>{plan.price.usd}</span>}
                     {plan.price.usd && plan.price.ngn && <span> | </span>}
                     {plan.price.ngn && <span>{plan.price.ngn}</span>}
@@ -143,20 +143,20 @@ const Pricing = () => {
                 )}
                 {/* Description removed */}
 
-                <ul className="mt-4">
+                <ul className="mt-2">
                   {plan.features.map((feature) => (
                     <li
                       key={feature}
-                      className="text-base py-2 flex space-x-2 items-start text-neutral-200"
+                      className="text-xs py-1 flex space-x-2 items-start text-neutral-200"
                     >
-                      <MdCheckCircleOutline className="text-red-500 mr-2 mt-0.5 text-xl shrink-0" />
+                      <MdCheckCircleOutline className="text-red-500 mr-2 mt-0.5 text-lg shrink-0" />
                       <span>{feature}</span>
                     </li>
                   ))}
                 </ul>
               </div>
 
-              <div className="mt-6">
+              <div className="mt-4">
                 {/* Uniform button color across all plans */}
                 <Link
                   href={plan.cta.href}
