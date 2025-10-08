@@ -2,6 +2,7 @@
 
 import React, { useRef, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 // Update video/poster paths per testimonial below.
 // Place files in public/videos/... and public/images/... or use remote URLs
@@ -197,12 +198,13 @@ const ShopifyStores = () => {
 
         {/* CTA Button */}
         <div className="flex justify-center mt-10">
-          <button
+          <Link
+            href={"/digitalvault"}
             type="button"
             className="px-8 py-4 rounded-full bg-gradient-to-r from-red-500 to-red-700 text-white font-bold text-xl shadow-lg hover:scale-105 transition-transform duration-200 ring-2 ring-red-400/60"
           >
             Unlock Access
-          </button>
+          </Link>
         </div>
       </div>
     </section>

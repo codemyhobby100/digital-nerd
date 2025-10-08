@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { LampContainer } from "@/components/ui/lamp";
 import { FaTrashAlt, FaLink, FaDollarSign, FaUserFriends } from "react-icons/fa";
+import Link from "next/link";
 
 export default function Mistake() {
   const mistakes = [
@@ -111,7 +112,8 @@ export default function Mistake() {
             transition={{ delay: 0.8 }}
             className="flex justify-center mt-16 mb-8"
           >
-            <button
+            <Link
+              href={"/digitalvault"}
               type="button"
               className="group px-8 py-4 rounded-full bg-gradient-to-r from-red-500 to-red-700 text-white font-bold text-xl shadow-lg hover:shadow-red-500/25 hover:scale-105 transition-all duration-200 ring-2 ring-red-400/60 flex items-center gap-2"
             >
@@ -131,7 +133,7 @@ export default function Mistake() {
                   strokeLinejoin="round"
                 />
               </svg>
-            </button>
+            </Link>
           </motion.div>
         </div>
       </div>

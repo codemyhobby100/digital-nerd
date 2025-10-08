@@ -1,27 +1,39 @@
 "use client";
 import React from "react";
 import "../globals.css";
+import Navbar from "@/components/navbar";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { MdCheckCircleOutline } from "react-icons/md";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
+
 type Props = {};
 
 const GetCourse = (props: Props) => {
+  const router = useRouter();
   const features = [
     "Comprehensive freelancing basics and overview.",
     "Effective strategies for managing orders and deliveries.",
     "Guidance on creating a niche-based, standout profile.",
     "Actionable tips to grow your freelance business.",
     "Marketing techniques to attract high-value clients.",
-    "LinkedIn profile optimization for maximum visibility.",
     "Advanced job scraping and application techniques.",
     "Access to a supportive community of fellow freelancers.",
   ];
 
   return (
-    <div className="bg-[#060312] antialiased bg-grid-white/[0.02] min-h-screen flex justify-center items-center p-4 sm:p-6 lg:p-8">
+    <div className="w-full md:items-center md:justify-center bg-[#060312]/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden text-white">
+      <Navbar
+        scrollToAbout={() => router.push('/#about')}
+        scrollToShopifyStores={() => router.push('/#shopify-stores')}
+        scrollToFaq={() => router.push('/#faq')}
+        scrollToPricing={() => router.push('/#pricing')}
+        scrollToServices={() => router.push('/#services')}
+      />
+      <div className="min-h-screen flex justify-center items-center p-4 sm:p-6 lg:p-8">
+
       <div className="max-w-6xl w-full mx-auto bg-neutral-900/50 border border-neutral-800 rounded-2xl shadow-2xl shadow-red-500/10 overflow-hidden">
         <div className="grid grid-cols-1 md:grid-cols-2">
           <motion.div 
@@ -63,17 +75,26 @@ const GetCourse = (props: Props) => {
               ))}
             </div>
 
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mt-auto">
-              <div className="text-3xl sm:text-4xl font-bold text-white">
-                ₦30,000
+            <div className="mt-auto">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                <div className="flex items-baseline gap-3">
+                  <div className="text-3xl sm:text-4xl font-bold text-white">
+                    $3.6
+                  </div>
+                  <div className="text-xl sm:text-2xl font-bold text-neutral-500 line-through">
+                    $5.0
+                  </div>
+                </div>
+                <a href="https://paystack.shop/pay/eabrh-fc1i" className="inline-block w-full sm:w-auto text-center px-8 py-3 rounded-lg bg-gradient-to-r from-red-500 to-red-700 text-white font-bold text-base shadow-lg hover:scale-105 transition-transform duration-200 disabled:opacity-70 disabled:cursor-not-allowed">
+                    Join Now
+                </a>
               </div>
-              <Link href="/buy" className="inline-block w-full sm:w-auto text-center px-8 py-3 rounded-lg bg-gradient-to-r from-red-500 to-red-700 text-white font-bold text-base shadow-lg hover:scale-105 transition-transform duration-200 disabled:opacity-70 disabled:cursor-not-allowed">
-                  Join Now
-              </Link>
+              <p className="text-sm text-red-400 mt-2 text-center sm:text-left">Limited time offer! Price returns to normal soon.</p>
             </div>
 
           </motion.div>
         </div>
+      </div>
       </div>
     </div>
   );

@@ -202,7 +202,7 @@ export default function Home() {
                 {/* Main CTA */}
                 <div className="mb-4 sm:mb-5">
                   <Link
-                    href={"/"}
+                    href={"/digitalvault"}
                     className="inline-flex items-center justify-center bg-white text-black font-semibold rounded-full px-6 py-2.5 text-sm hover:bg-gray-100 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
                   >
                     Join Private Community
