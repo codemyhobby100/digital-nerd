@@ -153,7 +153,7 @@ const About: React.FC = () => {
       </div>
 
       <div className="text-center mt-16 mb-12 max-w-2xl mx-auto">
-        <p className="text-lg text-neutral-300 mb-4">Exciting things are coming. Our next-generation program, <span className="font-bold text-white">Freelance 3.0</span>, is in development.</p>
+        <p className="text-lg text-neutral-300 mb-4">Exciting things are coming. Our next-generation program, <span className="font-bold text-white">Fiverr 3.0</span>, is in development.</p>
         <p className="text-neutral-400 mb-8">Be the first to know when we launch and get exclusive early-bird access.</p>
         <a
           href="https://docs.google.com/forms/d/e/1FAIpQLSdkEWt0y5rq6ueg4JZue2T-Oe4k1Gq1bjP46i7zVTez4HjbMw/viewform?usp=header"
