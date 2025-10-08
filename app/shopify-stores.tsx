@@ -44,15 +44,15 @@ const imageTestimonials: ImageTestimonial[] = [
     alt: "Testimonial from a happy member.",
   },
   {
-    imageSrc: "/images/testimonial7.jpg",
+    imageSrc: "/images/timeline2.jpg",
     alt: "Testimonial from a happy member.",
   },
   {
-    imageSrc: "/images/testimonial8.jpg",
+    imageSrc: "/images/testimonial5.jpeg",
     alt: "Testimonial from a happy member.",
   },
   {
-    imageSrc: "/images/testimonial9.jpg",
+    imageSrc: "/images/testimonial-2.jpg",
     alt: "Testimonial from a happy member.",
   },
 ];
