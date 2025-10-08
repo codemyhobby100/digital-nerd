@@ -4,6 +4,8 @@ import { motion } from 'framer-motion';
 import { Spotlight } from "@/components/ui/spotlight";
 import Navbar from "@/components/navbar";
 import { useRouter } from 'next/navigation';
+import emailjs from '@emailjs/browser';
+import Swal from 'sweetalert2';
 
 interface ContactFormData {
   fullName: string;
@@ -25,9 +27,11 @@ const ContactPage: React.FC = () => {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formStatus, setFormStatus] = useState<{ status: 'success' | 'error'; message: string } | null>(null);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
+    if (formStatus) setFormStatus(null); // Clear status on new input
     setFormData(prev => ({
       ...prev,
       [name]: value
@@ -37,15 +41,38 @@ const ContactPage: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Handle form submission logic here
-    console.log('Form submitted:', formData);
-    
-    // Simulate API call
-    setTimeout(() => {
+    setFormStatus(null);
+
+    const templateParams = {
+      full_name: formData.fullName,
+      email: formData.email,
+      phone_number: formData.phoneNumber,
+      subject: formData.subject,
+      message: formData.message,
+    };
+
+    emailjs.send(
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'YOUR_SERVICE_ID', // Replace with your Service ID or use environment variables
+      'template_grq579i',
+      templateParams,
+      process.env.NEXT_PUBLIC_EMAILJS_USER_ID || 'YOUR_USER_ID' // Replace with your User ID or use environment variables
+    ).then((response) => {
+      console.log('SUCCESS!', response.status, response.text);
+      Swal.fire({
+        title: 'Success!',
+        text: 'Your message has been sent successfully!',
+        icon: 'success',
+        background: '#0a0b13',
+        color: '#ffffff',
+        confirmButtonColor: '#ef4444'
+      });
+      setFormData({ fullName: '', email: '', phoneNumber: '', subject: '', message: '' });
+    }).catch((err) => {
+      console.error('FAILED...', err);
+      setFormStatus({ status: 'error', message: 'Failed to send the message. Please try again later.' });
+    }).finally(() => {
       setIsSubmitting(false);
-      // Reset form or show success message
-    }, 2000);
+    });
   };
 
   const telegramBotLink = "https://t.me/your_support_bot"; // Replace with your actual bot link
@@ -177,6 +204,16 @@ const ContactPage: React.FC = () => {
                     />
                   </div>
 
+                  {/* Form Status Message */}
+                  {formStatus && formStatus.status === 'error' && (
+                    <div
+                      className="text-sm text-center p-3 rounded-md bg-red-500/20 text-red-300"
+                      role="alert"
+                    >
+                      {formStatus.message}
+                    </div>
+                  )}
+
                   {/* Submit Button */}
                   <div>
                     <button
@@ -289,6 +326,5 @@ const ContactPage: React.FC = () => {
     </div>
   );
 };
-
 
 export default ContactPage;
