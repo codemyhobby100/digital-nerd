@@ -2,14 +2,9 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { Timeline } from "@/components/ui/timeline";
-import { WaitlistModal } from "@/components/ui/waitlist-modal";
+import { Timeline } from "@/components/ui/timeline";;
 
-interface AboutProps {
-  onWaitlistClick: () => void;
-}
-
-const About: React.FC<AboutProps> = ({ onWaitlistClick }) => {
+const About: React.FC = () => {
 
   // Timeline content aligned with the section titles
   const data: { title: string; content: React.ReactNode }[] = [
@@ -160,7 +155,14 @@ const About: React.FC<AboutProps> = ({ onWaitlistClick }) => {
       <div className="text-center mt-16 mb-12 max-w-2xl mx-auto">
         <p className="text-lg text-neutral-300 mb-4">Exciting things are coming. Our next-generation program, <span className="font-bold text-white">Freelance 3.0</span>, is in development.</p>
         <p className="text-neutral-400 mb-8">Be the first to know when we launch and get exclusive early-bird access.</p>
-        <button onClick={onWaitlistClick} type="button" className="px-8 py-4 rounded-full bg-gradient-to-r from-red-500 to-red-700 text-white font-bold text-lg shadow-lg hover:scale-105 transition-transform duration-200 ring-2 ring-red-400/60">Join the Waitlist for 3.0</button>
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfIIbb4jp86qtFH_BUln5K_zaNO-mcqkHHNIZSFsEWX1KZGMQ/viewform?usp=header"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block px-8 py-4 rounded-full bg-gradient-to-r from-red-500 to-red-700 text-white font-bold text-lg shadow-lg hover:scale-105 transition-transform duration-200 ring-2 ring-red-400/60"
+        >
+          Join the Waitlist for 3.0
+        </a>
       </div>
     </div>
     
