@@ -8,9 +8,9 @@ import emailjs from '@emailjs/browser';
 import Swal from 'sweetalert2';
 
 interface ContactFormData {
-  fullName: string;
+  full_name: string;
   email: string;
-  phoneNumber: string;
+  phone_number: string;
   subject: string;
   message: string;
 }
@@ -19,9 +19,9 @@ const ContactPage: React.FC = () => {
   const router = useRouter();
 
   const [formData, setFormData] = useState<ContactFormData>({
-    fullName: '',
+    full_name: '',
     email: '',
-    phoneNumber: '',
+    phone_number: '',
     subject: '',
     message: ''
   });
@@ -43,19 +43,13 @@ const ContactPage: React.FC = () => {
     setIsSubmitting(true);
     setFormStatus(null);
 
-    const templateParams = {
-      full_name: formData.fullName,
-      email: formData.email,
-      phone_number: formData.phoneNumber,
-      subject: formData.subject,
-      message: formData.message,
-    };
+    const templateParams = { ...formData };
 
     emailjs.send(
-      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'YOUR_SERVICE_ID', // Replace with your Service ID or use environment variables
-      'template_grq579i',
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'service_itoxhuf', // Replace with your Service ID or use environment variables
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || 'template_grq579i',
       templateParams,
-      process.env.NEXT_PUBLIC_EMAILJS_USER_ID || 'YOUR_USER_ID' // Replace with your User ID or use environment variables
+      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || 'dMLU71QXgqS3PIRY-' // Replace with your Public Key or use environment variables
     ).then((response) => {
       console.log('SUCCESS!', response.status, response.text);
       Swal.fire({
@@ -66,7 +60,7 @@ const ContactPage: React.FC = () => {
         color: '#ffffff',
         confirmButtonColor: '#ef4444'
       });
-      setFormData({ fullName: '', email: '', phoneNumber: '', subject: '', message: '' });
+      setFormData({ full_name: '', email: '', phone_number: '', subject: '', message: '' });
     }).catch((err) => {
       console.error('FAILED...', err);
       setFormStatus({ status: 'error', message: 'Failed to send the message. Please try again later.' });
@@ -125,14 +119,14 @@ const ContactPage: React.FC = () => {
                   {/* Full Name */}
                   <div>
                     <label htmlFor="fullName" className="block text-sm font-medium text-neutral-300 mb-2">
-                      Full Name *
+                      Full Name
                     </label>
                     <input
                       type="text"
-                      id="fullName"
-                      name="fullName"
+                      id="full_name"
+                      name="full_name"
                       required
-                      value={formData.fullName}
+                      value={formData.full_name}
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 bg-neutral-800/50 border border-neutral-700 rounded-md text-neutral-50 placeholder-neutral-400 focus:ring-2 focus:ring-neutral-400 focus:border-transparent transition duration-200 backdrop-blur-sm"
                       placeholder="Enter your full name"
@@ -143,7 +137,7 @@ const ContactPage: React.FC = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium text-neutral-300 mb-2">
-                        Email Address *
+                        Email Address
                       </label>
                       <input
                         type="email"
@@ -159,13 +153,13 @@ const ContactPage: React.FC = () => {
 
                     <div>
                       <label htmlFor="phoneNumber" className="block text-sm font-medium text-neutral-300 mb-2">
-                        Phone Number
+                        Phone Number (Optional)
                       </label>
                       <input
                         type="tel"
-                        id="phoneNumber"
-                        name="phoneNumber"
-                        value={formData.phoneNumber}
+                        id="phone_number"
+                        name="phone_number"
+                        value={formData.phone_number}
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-neutral-800/50 border border-neutral-700 rounded-md text-neutral-50 placeholder-neutral-400 focus:ring-2 focus:ring-neutral-400 focus:border-transparent transition duration-200 backdrop-blur-sm"
                         placeholder="+1 (555) 123-4567"
@@ -176,7 +170,7 @@ const ContactPage: React.FC = () => {
                   {/* Subject */}
                   <div>
                     <label htmlFor="subject" className="block text-sm font-medium text-neutral-300 mb-2">
-                      Subject *
+                      Subject
                     </label>
                     <input
                       id="subject"
@@ -190,7 +184,7 @@ const ContactPage: React.FC = () => {
                   {/* Message */}
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-neutral-300 mb-2">
-                      Message *
+                      Message
                     </label>
                     <textarea
                       id="message"
