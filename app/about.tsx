@@ -156,7 +156,7 @@ const About: React.FC = () => {
         <p className="text-lg text-neutral-300 mb-4">Exciting things are coming. Our next-generation program, <span className="font-bold text-white">Freelance 3.0</span>, is in development.</p>
         <p className="text-neutral-400 mb-8">Be the first to know when we launch and get exclusive early-bird access.</p>
         <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLSfIIbb4jp86qtFH_BUln5K_zaNO-mcqkHHNIZSFsEWX1KZGMQ/viewform?usp=header"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSdkEWt0y5rq6ueg4JZue2T-Oe4k1Gq1bjP46i7zVTez4HjbMw/viewform?usp=header"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block px-8 py-4 rounded-full bg-gradient-to-r from-red-500 to-red-700 text-white font-bold text-lg shadow-lg hover:scale-105 transition-transform duration-200 ring-2 ring-red-400/60"
