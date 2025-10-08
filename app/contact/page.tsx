@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Spotlight } from "@/components/ui/spotlight";
 import Navbar from "@/components/navbar";
+import { useRouter } from 'next/navigation';
 
 interface ContactFormData {
   fullName: string;
@@ -13,6 +14,8 @@ interface ContactFormData {
 }
 
 const ContactPage: React.FC = () => {
+  const router = useRouter();
+
   const [formData, setFormData] = useState<ContactFormData>({
     fullName: '',
     email: '',
@@ -56,15 +59,15 @@ const ContactPage: React.FC = () => {
   };
 
   return (
-    <div className="w-full md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
+    <div className="w-full md:items-center md:justify-center bg-[#060312]/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden text-white ">
       <Navbar
-        scrollToAbout={() => {}}
-        scrollToShopifyStores={() => {}}
-        scrollToFaq={() => {}}
-        scrollToPricing={() => {}}
-        scrollToServices={() => {}}
+        scrollToAbout={() => router.push('/#about')}
+        scrollToShopifyStores={() => router.push('/#shopify-stores')}
+        scrollToFaq={() => router.push('/#faq')}
+        scrollToPricing={() => router.push('/#pricing')}
+        scrollToServices={() => router.push('/#services')}
       />
-      <Spotlight className="hidden md:flex md:-top-80 left-80" fill="white" />
+      <Spotlight className="hidden md:flex md:-top-80 left-80" fill="white"/>
       
       <div className="p-4 mx-auto relative z-10 w-full pt-10 md:pt-20 px-2">
         {/* Header */}
@@ -73,11 +76,11 @@ const ContactPage: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="text-center mb-12"
-        >
+          >
           <div className="text-4xl pb-5 md:text-7xl px-6 text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to bg-neutral-400 bg-opacity-50">
             Contact Us
           </div>
-          <p className="mt-4 text-lg font-normal text-neutral-300 max-w-lg md:max-w-2xl lg:max-w-3xl text-center mx-auto px-4 md:px-0">
+          <p className="mt-4 text-lg font-normal text-neutral-300 max-w-lg md:max-w-2xl lg:max-w-3xl text-center mx-auto px-4 md:px-0 ">
             Get in touch with our team. We&apos;re here to help and answer any questions you might have.
           </p>
         </motion.div>
@@ -86,10 +89,10 @@ const ContactPage: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Contact Form */}
             <motion.div {...sectionProps} className="lg:col-span-2">
-              <div className="bg-neutral-900/50 border border-neutral-800 rounded-lg backdrop-blur-sm p-8">
+              <div className="bg-neutral-900/50 border border-neutral-800 rounded-lg backdrop-blur-sm p-8 ">
                 <h2 className="text-2xl font-semibold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to bg-neutral-400 mb-6">
                   Send us a message
-                </h2>
+                </h2> 
                 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Full Name */}
@@ -148,21 +151,13 @@ const ContactPage: React.FC = () => {
                     <label htmlFor="subject" className="block text-sm font-medium text-neutral-300 mb-2">
                       Subject *
                     </label>
-                    <select
+                    <input
                       id="subject"
                       name="subject"
                       required
                       value={formData.subject}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-neutral-800/50 border border-neutral-700 rounded-md text-neutral-50 focus:ring-2 focus:ring-neutral-400 focus:border-transparent transition duration-200 backdrop-blur-sm"
-                    >
-                      <option value="" className="text-neutral-400">Select a subject</option>
-                      <option value="general">General Inquiry</option>
-                      <option value="support">Technical Support</option>
-                      <option value="billing">Billing Question</option>
-                      <option value="partnership">Partnership</option>
-                      <option value="other">Other</option>
-                    </select>
+                      onChange={handleInputChange} 
+                      className="w-full px-4 py-3 bg-neutral-800/50 border border-neutral-700 rounded-md text-neutral-50 placeholder-neutral-400 focus:ring-2 focus:ring-neutral-400 focus:border-transparent transition duration-200 backdrop-blur-sm"/>
                   </div>
 
                   {/* Message */}
@@ -211,20 +206,10 @@ const ContactPage: React.FC = () => {
               {/* Contact Info */}
               <motion.div {...sectionProps}>
                 <div className="bg-neutral-900/50 border border-neutral-800 rounded-lg backdrop-blur-sm p-6">
-                  <h3 className="text-lg font-semibold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to bg-neutral-400 mb-4">
+                  <h3 className="text-lg font-semibold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to bg-neutral-400 mb-4 ">
                     Contact Information
                   </h3>
                   <div className="space-y-4">
-                    <div className="flex items-start">
-                      <svg className="w-5 h-5 text-neutral-400 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                      </svg>
-                      <div>
-                        <p className="text-sm font-medium text-neutral-50">Address</p>
-                        <p className="text-sm text-neutral-300">123 Business St, Suite 100<br />City, State 12345</p>
-                      </div>
-                    </div>
 
                     <div className="flex items-start">
                       <svg className="w-5 h-5 text-neutral-400 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -252,7 +237,7 @@ const ContactPage: React.FC = () => {
               {/* Telegram Support */}
               <motion.div {...sectionProps}>
                 <div className="bg-gradient-to-br from-neutral-800 to-neutral-900 border border-neutral-700 rounded-lg backdrop-blur-sm p-6 text-neutral-50">
-                  <div className="flex items-center mb-4">
+                  <div className="flex items-center mb-4 ">
                     <svg className="w-8 h-8 mr-3 text-neutral-300" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
                     </svg>
@@ -278,7 +263,7 @@ const ContactPage: React.FC = () => {
               {/* Business Hours */}
               <motion.div {...sectionProps}>
                 <div className="bg-neutral-900/50 border border-neutral-800 rounded-lg backdrop-blur-sm p-6">
-                  <h3 className="text-lg font-semibold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to bg-neutral-400 mb-4">
+                  <h3 className="text-lg font-semibold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to bg-neutral-400 mb-4 ">
                     Business Hours
                   </h3>
                   <div className="space-y-2 text-sm">
@@ -304,5 +289,6 @@ const ContactPage: React.FC = () => {
     </div>
   );
 };
+
 
 export default ContactPage;
