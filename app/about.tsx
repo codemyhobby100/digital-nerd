@@ -38,7 +38,7 @@ const About: React.FC<AboutProps> = ({ onWaitlistClick }) => {
               className="aspect-square w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
             <Image
-              src="/images/timeline5.jpg"
+              src="/images/testimonial13.jpg"
               alt="Mentorship session"
               width={500}
               height={500}
@@ -66,7 +66,7 @@ const About: React.FC<AboutProps> = ({ onWaitlistClick }) => {
           </p>
           <div className="grid max-w-sm grid-cols-2 gap-2">
             <Image
-              src="/images/timeline4.jpg"
+              src="/images/testimonial4.jpg"
               alt="Course modules and lesson flow"
               width={500}
               height={500}
@@ -74,7 +74,7 @@ const About: React.FC<AboutProps> = ({ onWaitlistClick }) => {
               className="aspect-square w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
             <Image
-              src="/images/testimonial6.jpg"
+              src="/images/t.jpg"
               alt="Strategies and playbooks library"
               width={500}
               height={500}
@@ -82,7 +82,7 @@ const About: React.FC<AboutProps> = ({ onWaitlistClick }) => {
               className="aspect-square w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
             <Image
-              src="/images/timeline5.jpg"
+              src="/images/testimonial15.jpg"
               alt="Pricing strategy example"
               width={500}
               height={500}
@@ -90,7 +90,7 @@ const About: React.FC<AboutProps> = ({ onWaitlistClick }) => {
               className="aspect-square w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
             <Image
-              src="/images/timeline4.jpg"
+              src="/images/testimonial17.jpg"
               alt="Proposal writing guide"
               width={500}
               height={500}
@@ -118,7 +118,7 @@ const About: React.FC<AboutProps> = ({ onWaitlistClick }) => {
               className="aspect-square w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
             <Image
-              src="/images/timeline3.jpg"
+              src="/images/testimonial16.jpg"
               alt="Portfolio guidance and feedback"
               width={500}
               height={500}
@@ -126,7 +126,7 @@ const About: React.FC<AboutProps> = ({ onWaitlistClick }) => {
               className="aspect-square w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
             <Image
-              src="/images/timeline5.jpg"
+              src="/images/testimonial8.jpg"
               alt="Live feedback session"
               width={500}
               height={500}
@@ -134,7 +134,7 @@ const About: React.FC<AboutProps> = ({ onWaitlistClick }) => {
               className="aspect-square w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
             <Image
-              src="/images/timeline4.jpg"
+              src="/images/testimonial9.jpg"
               alt="Client closing techniques"
               width={500}
               height={500}

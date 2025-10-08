@@ -41,7 +41,7 @@ export default function Mistake() {
         </LampContainer>
 
         {/* Content Section */}
-        <div className="relative z-10 flex flex-col items-center mt-[-38rem]">
+        <div className="relative z-10 flex flex-col items-center mt-[-32rem]">
           {/* Heading */}
           <motion.h1
             initial={{ opacity: 0.5, y: 100 }}

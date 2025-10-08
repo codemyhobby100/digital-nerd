@@ -102,7 +102,7 @@ const VideoTestimonialCard: React.FC<StoreTestimonial> = ({
             aria-label="Play testimonial video"
             title="Play"
             onClick={handlePlayClick}
-            className="absolute inset-0 grid place-items-center bg-[#060312]/[0.96] backdrop-blur-[1px] rounded-lg transition-opacity"
+            className="absolute inset-0 grid place-items-center rounded-lg transition-opacity"
           >
             <span className="relative inline-flex h-16 w-16 items-center justify-center">
               {/* animated green rings */}
