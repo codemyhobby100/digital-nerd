@@ -14,13 +14,15 @@ type Props = {};
 const GetCourse = (props: Props) => {
   const router = useRouter();
   const features = [
-    "Comprehensive freelancing basics and overview.",
-    "Effective strategies for managing orders and deliveries.",
-    "Guidance on creating a niche-based, standout profile.",
-    "Actionable tips to grow your freelance business.",
-    "Marketing techniques to attract high-value clients.",
-    "Advanced job scraping and application techniques.",
-    "Access to a supportive community of fellow freelancers.",
+    "Daily Action Plan",
+    "Premium Templates",
+    "Live Workshop",
+    "Active Support & Conversation",
+    "Quick Win Challenge",
+    "Educational Resource",
+    "Free Skill Acquisition",
+    "Free Forex Signals",
+    "Learn From Others",
   ];
 
   return (

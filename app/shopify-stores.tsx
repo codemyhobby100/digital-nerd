@@ -17,19 +17,19 @@ const stores: StoreTestimonial[] = [
   {
     videoSrc: "/images/testimony.mp4", // <-- changed from /images/testomp-1.mp4
     quote:
-      "if you&apos;re a level 1 seller on fiverr there is a faster way to land orders. on Set Coach @Hon_Joshuaa explained this, i never knew this was possible, wow",
-    name: "T.E",
+      "I enjoyed the course from start to finish. It was clear, practical, and full of useful insights. I’m glad I invested in it",
+    name: "DEON",
   },
   {
     videoSrc: "/images/testimony5.mp4",
-    quote: "This program was worth every penny!,",
+    quote: "Fiverr 1.0 was an eye opener and the ultimate game changer to my freelance journey on Fiverr. With every penny ",
     name: "H.S.M",
   },
   {
     videoSrc: "/images/testimony6.mp4",
     quote:
-      "Fiverr 1.0 changed my freelancing path. I was frustrated and doing it wrong; with clear strategies and mentorship, I doubled my income within months.",
-    name: "a****10****E",
+      "Earn with Joshuaa was a memorable one, everything was well explained and easy to follow. I definitely learned a lot and feel more confident now",
+    name: "STUDENTS",
   },
 ];
 
