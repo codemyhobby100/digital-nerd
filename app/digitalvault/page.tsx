@@ -78,14 +78,15 @@ const GetCourse = (props: Props) => {
             <div className="mt-auto">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                 <div className="flex items-baseline gap-3">
-                  <div className="text-3xl sm:text-4xl font-bold text-white">
-                    $3.6
+                  <div className="flex items-baseline">
+                    <span className="text-3xl sm:text-4xl font-bold text-white">$3.6</span>
+                    <span className="text-lg text-neutral-400">/month</span>
                   </div>
                   <div className="text-xl sm:text-2xl font-bold text-neutral-500 line-through">
                     $5.0
                   </div>
                 </div>
-                <a href="https://paystack.shop/pay/eabrh-fc1i" className="inline-block w-full sm:w-auto text-center px-8 py-3 rounded-lg bg-gradient-to-r from-red-500 to-red-700 text-white font-bold text-base shadow-lg hover:scale-105 transition-transform duration-200 disabled:opacity-70 disabled:cursor-not-allowed">
+                <a href="https://paystack.shop/pay/digitalnerd-vault" className="inline-block w-full sm:w-auto text-center px-8 py-3 rounded-lg bg-gradient-to-r from-red-500 to-red-700 text-white font-bold text-base shadow-lg hover:scale-105 transition-transform duration-200 disabled:opacity-70 disabled:cursor-not-allowed">
                     Join Now
                 </a>
               </div>
