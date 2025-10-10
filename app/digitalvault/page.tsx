@@ -45,7 +45,7 @@ const GetCourse = (props: Props) => {
             className="relative w-full h-64 md:h-full min-h-[300px]">
             <Image
               priority
-              src="/images/valut.jpg"
+              src="/images/vault.jpg"
               alt="Course banner"
               layout="fill"
               objectFit="cover"
