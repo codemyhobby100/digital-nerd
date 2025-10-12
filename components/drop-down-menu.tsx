@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 interface DropDownMenuProps {
   onClose: () => void;
@@ -38,6 +39,9 @@ const DropDownMenu: React.FC<DropDownMenuProps> = ({
         <div onClick={scrollToFaq} className="text-black text-2xl cursor-pointer">
           FAQ
         </div>
+        <Link href="/contact" className="text-black text-2xl cursor-pointer">
+            Contact Us
+        </Link>
       </div>
     </motion.div>
   );

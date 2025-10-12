@@ -59,7 +59,7 @@ const GetCourse = (props: Props) => {
             transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
             className="p-6 sm:p-8 lg:p-10 flex flex-col justify-center">
             <h1 className="text-3xl sm:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 mb-3">
-              The Digital Nerd Vault
+              The Digitalnerdhq Vault
             </h1>
             <p className="text-neutral-300 mb-6 text-base sm:text-lg">
               Unlock the secrets to a successful freelancing career. This vault is your all-in-one resource to build skills, get clients, and grow your income.
