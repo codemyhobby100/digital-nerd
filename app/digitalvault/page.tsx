@@ -32,7 +32,7 @@ const GetCourse = (props: Props) => {
       originalPrice: "$5.0",
       priceSuffix: "/month",
       savings: null,
-      href: "https://paystack.shop/pay/digitalnerd-vault",
+      href: "https://paystack.shop/pay/1-month-vault",
       popular: false,
     },
     {
@@ -40,7 +40,7 @@ const GetCourse = (props: Props) => {
       price: "$8.6",
       originalPrice: "$15",
       savings: "Save $2",
-      href: "https://paystack.shop/pay/digitalnerd-vault-3months",
+      href: "https://paystack.shop/pay/3-month-vault",
       popular: true,
     },
     {
@@ -48,7 +48,7 @@ const GetCourse = (props: Props) => {
       price: "$16.6",
       originalPrice: "$30",
       savings: "Save $5",
-      href: "https://paystack.shop/pay/digitalnerd-vault-6months",
+      href: "https://paystack.shop/pay/6-months-vault",
       popular: false,
     },
   ];
