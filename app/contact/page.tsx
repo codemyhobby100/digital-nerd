@@ -248,7 +248,7 @@ const ContactPage: React.FC = () => {
                       </svg>
                       <div>
                         <p className="text-sm font-medium text-neutral-50">Email</p>
-                        <p className="text-sm text-neutral-300">support@company.com</p>
+                        <p className="text-sm text-neutral-300">Digitalnerdconsult@gmail.com</p>
                       </div>
                     </div>
 
