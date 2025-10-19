@@ -257,7 +257,7 @@ export default function Home() {
             >
               <div className="relative w-full h-[300px] sm:h-[350px] md:h-[400px] lg:h-[450px] xl:h-[550px] 2xl:h-[600px]">
                 <Image
-                  src="/images/banner2.jpg" 
+                  src="/images/banner6.jpg" 
                   alt="Digital creators working"
                   fill
                   className="object-cover rounded-xl sm:rounded-2xl"
