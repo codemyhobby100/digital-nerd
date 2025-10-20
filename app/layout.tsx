@@ -1,5 +1,6 @@
 
 import { Analytics } from '@vercel/analytics/react';
+import Script from 'next/script';
 
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -7,42 +8,37 @@ import "./globals.css";
 
 const font = Inter(
   { subsets: ["latin"],
-    // You can specify weights here if needed, e.g., weight: ['400', '700']
 }
   );
 
 export const metadata: Metadata = {
-  // Set a base URL for all relative URLs in metadata
-  metadataBase: new URL('https://www.digitalnerdhq.com'), // IMPORTANT: Replace with your actual domain
+  metadataBase: new URL('https://www.digitalnerdhq.com'),
 
-  // Title can be a template to apply to all pages
   title: {
     default: "DigitalNerdHQ – Turn Your Digital Skills Into Income",
     template: "%s | DigitalNerdHQ",
   },
   description: "You've got the skill—we'll help you monetize it. Join our community of creators turning design, writing, and coding into profitable businesses.",
   
-  // Add relevant keywords
+  
   keywords: ['freelancing', 'digital skills', 'monetize skills', 'online business', 'Fiverr', 'Upwork', 'freelance course', 'digital marketing'],
 
-  // Add author and publisher information
+
   authors: [{ name: 'DigitalNerdHQ', url: 'https://www.digitalnerdhq.com' }],
   creator: 'DigitalNerdHQ',
   publisher: 'DigitalNerdHQ',
 
-  // Control how search engines crawl the site
   robots: {
     index: true,
     follow: true,
   },
 
-  // Open Graph (for social media sharing, e.g., Facebook, LinkedIn)
   openGraph: {
     title: "DigitalNerdHQ – Turn Your Digital Skills Into Income",
     description: "Monetize your digital skills and turn them into a sustainable income with our expert-led programs and community.",
     url: "https://www.digitalnerdhq.com",
     siteName: "DigitalNerdHQ",
-    images: '/images/og-image.png', // IMPORTANT: Create and add an og-image.png in your /public/images folder (1200x630px recommended)
+    images: '/images/digitalnerd.png', // IMPORTANT: Create and add an og-image.png in your /public/images folder (1200x630px recommended)
     locale: 'en_US',
     type: 'website',
   },
@@ -52,7 +48,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "DigitalNerdHQ – Turn Your Digital Skills Into Income",
     description: "Monetize your digital skills and turn them into a sustainable income with our expert-led programs and community.",
-    images: ['/images/og-image.png'], // IMPORTANT: Ensure this image exists
+    images: ['/images/digitalnerd.png'], // IMPORTANT: Ensure this image exists
     creator: '@DigitalNerdHQ',
   },
 
@@ -78,6 +74,23 @@ export default function RootLayout({
       suppressHydrationWarning={true}
       className={font.className}>
         <Analytics />
+        {/* Google tag (gtag.js) */}
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-FJ94QYC5RK"
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-FJ94QYC5RK');
+            `,
+          }}
+        />
         {/* Meta Pixel Code */}
         <script
           dangerouslySetInnerHTML={{
