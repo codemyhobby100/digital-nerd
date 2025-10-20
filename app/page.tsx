@@ -24,6 +24,7 @@ import { FaInstagram, FaStar, FaTelegramPlane, FaWhatsapp } from "react-icons/fa
 import { FaXTwitter } from "react-icons/fa6";
 import Head from "next/head";
 import { motion } from "framer-motion";
+import WaitlistPopup from "@/components/waitlist-pop-up"
 
 
 function useLenis(options?: Partial<LenisOptions>) {
@@ -71,6 +72,26 @@ export default function Home() {
   };
   const closeDropdown = () => {
     setDropdownVisible(false); };
+
+  const [showWaitlistPopup, setShowWaitlistPopup] = useState(false);
+
+  useEffect(() => {
+    const hasSeenPopup = sessionStorage.getItem("hasSeenWaitlistPopup");
+
+    if (!hasSeenPopup) {
+      const timer = setTimeout(() => {
+        setShowWaitlistPopup(true);
+      }, 3000); // Show popup after 3 seconds
+
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
+  const handleClosePopup = () => {
+    setShowWaitlistPopup(false);
+    sessionStorage.setItem("hasSeenWaitlistPopup", "true");
+  };
+
 
   const AboutnRef = useRef<HTMLDivElement>(null);
   // const websiteDesignRef = useRef<HTMLDivElement>(null);
@@ -144,6 +165,7 @@ export default function Home() {
         <link rel="icon" href="/logo.png" />
         {/* You can add more metadata here if needed */}
       </Head>
+      {showWaitlistPopup && <WaitlistPopup onClose={handleClosePopup} />}
       <div className="w-full md:items-center md:justify-center bg-[#060312]/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
         <Navbar
           scrollToAbout={scrollToAbout}
