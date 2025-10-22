@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     description: "Monetize your digital skills and turn them into a sustainable income with our expert-led programs and community.",
     url: "https://www.digitalnerdhq.com",
     siteName: "DigitalNerdHQ",
-    images: '/images/digitalnerd.png', // IMPORTANT: Create and add an og-image.png in your /public/images folder (1200x630px recommended)
+    images: '/images/digitalnerd.jpg',
     locale: 'en_US',
     type: 'website',
   },
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "DigitalNerdHQ – Turn Your Digital Skills Into Income",
     description: "Monetize your digital skills and turn them into a sustainable income with our expert-led programs and community.",
-    images: ['/images/digitalnerd.png'], // IMPORTANT: Ensure this image exists
+    images: ['/images/digitalnerd.jpg'],
     creator: '@DigitalNerdHQ',
   },
 
