@@ -13,6 +13,7 @@ interface ContactFormData {
   phone_number: string;
   subject: string;
   message: string;
+  honeypot: string; // Honeypot field
 }
 
 const ContactPage: React.FC = () => {
@@ -23,7 +24,8 @@ const ContactPage: React.FC = () => {
     email: '',
     phone_number: '',
     subject: '',
-    message: ''
+    message: '',
+    honeypot: '' // Honeypot field
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -43,6 +45,13 @@ const ContactPage: React.FC = () => {
     setIsSubmitting(true);
     setFormStatus(null);
 
+    // Honeypot check
+    if (formData.honeypot) {
+      console.log('Bot submission detected');
+      setIsSubmitting(false);
+      return; // Silently fail
+    }
+
     const templateParams = { ...formData };
 
     emailjs.send(
@@ -60,7 +69,7 @@ const ContactPage: React.FC = () => {
         color: '#ffffff',
         confirmButtonColor: '#ef4444'
       });
-      setFormData({ full_name: '', email: '', phone_number: '', subject: '', message: '' });
+      setFormData({ full_name: '', email: '', phone_number: '', subject: '', message: '', honeypot: '' });
     }).catch((err) => {
       console.error('FAILED...', err);
       setFormStatus({ status: 'error', message: 'Failed to send the message. Please try again later.' });
@@ -181,6 +190,19 @@ const ContactPage: React.FC = () => {
                       className="w-full px-4 py-3 bg-neutral-800/50 border border-neutral-700 rounded-md text-neutral-50 placeholder-neutral-400 focus:ring-2 focus:ring-neutral-400 focus:border-transparent transition duration-200 backdrop-blur-sm"/>
                   </div>
 
+                  {/* Honeypot field - hidden from users */}
+                  <div className="absolute w-0 h-0 overflow-hidden">
+                    <label htmlFor="honeypot">Do not fill this out</label>
+                    <input
+                      type="text"
+                      id="honeypot"
+                      name="honeypot"
+                      value={formData.honeypot}
+                      onChange={handleInputChange}
+                      tabIndex={-1}
+                    />
+                  </div>
+
                   {/* Message */}
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-neutral-300 mb-2">
@@ -241,26 +263,7 @@ const ContactPage: React.FC = () => {
                     Contact Information
                   </h3>
                   <div className="space-y-4">
-
-                    <div className="flex items-start">
-                      <svg className="w-5 h-5 text-neutral-400 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                      </svg>
-                      <div>
-                        <p className="text-sm font-medium text-neutral-50">Email</p>
-                        <p className="text-sm text-neutral-300">Digitalnerdconsult@gmail.com</p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start">
-                      <svg className="w-5 h-5 text-neutral-400 mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                      </svg>
-                      <div>
-                        <p className="text-sm font-medium text-neutral-50">Phone</p>
-                        <p className="text-sm text-neutral-300">+1 (555) 123-4567</p>
-                      </div>
-                    </div>
+                    <p className="text-sm text-neutral-300">Please use the form to send us a message, or chat with us on Telegram for a faster response.</p>
                   </div>
                 </div>
               </motion.div>
