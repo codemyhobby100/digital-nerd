@@ -29,7 +29,7 @@ const ContactPage: React.FC = () => {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formStatus, setFormStatus] = useState<{ status: 'success' | 'error'; message: string } | null>(null);
+  const [formStatus, setFormStatus] = useState<{ status: 'success' | 'error'; message: string } | null>(null); 
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;

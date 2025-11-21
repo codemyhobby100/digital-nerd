@@ -38,19 +38,17 @@ const WaitlistPopup: React.FC<WaitlistPopupProps> = ({ onClose }) => {
           {/* Content */}
           <div className="text-center">
             <h2 className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 mb-2">
-              Fiverr 3.0 is Coming!
+              Join Our Private Community!
             </h2>
             <p className="text-neutral-300 mb-6">
-              Be the first to know when our next-generation program launches and get exclusive early-bird access.
+              Get exclusive access to our community of creators and freelancers.
             </p>
             <Link
-              href="https://docs.google.com/forms/d/e/1FAIpQLSdkEWt0y5rq6ueg4JZue2T-Oe4k1Gq1bjP46i7zVTez4HjbMw/viewform?usp=header"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/digitalvault"
               onClick={onClose}
               className="inline-block w-full px-8 py-3 rounded-full bg-gradient-to-r from-red-500 to-red-700 text-white font-bold text-lg shadow-lg hover:scale-105 transition-transform duration-200 ring-2 ring-red-400/60"
             >
-              Join the Waitlist
+              Join Now
             </Link>
           </div>
         </motion.div>
