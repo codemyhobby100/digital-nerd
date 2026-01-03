@@ -28,8 +28,7 @@ const GetCourse = (props: Props) => {
   const plans = [
     {
       name: "1 Month",
-      price: "$3.6",
-      originalPrice: "$5.0",
+      price: "$5",
       priceSuffix: "/month",
       savings: null,
       href: "https://paystack.shop/pay/1-month-vault",
@@ -37,16 +36,14 @@ const GetCourse = (props: Props) => {
     },
     {
       name: "3 Months",
-      price: "$8.6",
-      originalPrice: "$15",
+      price: "$10.7",
       savings: "Save $2",
       href: "https://paystack.shop/pay/3-month-vault",
       popular: true,
     },
     {
       name: "6 Months",
-      price: "$16.6",
-      originalPrice: "$30",
+      price: "$18.5",
       savings: "Save $5",
       href: "https://paystack.shop/pay/6-months-vault",
       popular: false,
@@ -166,9 +163,6 @@ const GetCourse = (props: Props) => {
                         {plan.priceSuffix}
                       </span>
                     )}
-                    <span className="text-xl font-bold text-neutral-500 line-through">
-                      {plan.originalPrice}
-                    </span>
                   </div>
                   <a href={plan.href} className={`mt-auto pt-8 block w-full py-3 px-6 text-center rounded-lg font-semibold text-base transition-transform duration-200 ${plan.popular ? 'bg-gradient-to-r from-red-500 to-red-700 text-white shadow-lg hover:scale-105' : 'bg-neutral-800 hover:bg-neutral-700 text-white'}`}>
                     Join Now
