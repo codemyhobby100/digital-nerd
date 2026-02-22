@@ -9,27 +9,37 @@ import Link from "next/link";
 // (ensure domains are allowed in next.config.js images.remotePatterns if using poster images via <Image>).
 type StoreTestimonial = {
   videoSrc: string;
+  poster?: string;
   quote: string;
   name: string;
 };
 
 const stores: StoreTestimonial[] = [
   {
-    videoSrc: "/images/testimony.mp4", // <-- changed from /images/testomp-1.mp4
+    videoSrc: "https://res.cloudinary.com/dfyeocma8/video/upload/v1771777532/fcgqyj6pacaoq4ibaqfr.mp4",
+    poster: "https://res.cloudinary.com/dfyeocma8/video/upload/v1771777532/fcgqyj6pacaoq4ibaqfr.jpg",
     quote:
       "I enjoyed the course from start to finish. It was clear, practical, and full of useful insights. I’m glad I invested in it",
-    name: "DEON",
+    name: "Otito",
   },
   {
-    videoSrc: "/images/testimony5.mp4",
+    videoSrc: "https://res.cloudinary.com/dfyeocma8/video/upload/v1771777582/w7kt6srzl7klhpafqp88.mp4",
+    poster: "https://res.cloudinary.com/dfyeocma8/video/upload/v1771777582/w7kt6srzl7klhpafqp88.jpg",
     quote: "Fiverr 1.0 was an eye opener and the ultimate game changer to my freelance journey on Fiverr. With every penny ",
-    name: "H.S.M",
+    name: "Chiamaka",
   },
   {
-    videoSrc: "/images/testimony6.mp4",
+    videoSrc: "https://res.cloudinary.com/dfyeocma8/video/upload/v1771777617/cy2brnbl4yndm1ej2b8l.mp4",
+    poster: "https://res.cloudinary.com/dfyeocma8/video/upload/v1771777617/cy2brnbl4yndm1ej2b8l.jpg",
     quote:
       "Earn with Joshuaa was a memorable one, everything was well explained and easy to follow. I definitely learned a lot and feel more confident now",
-    name: "STUDENTS",
+    name: "Deon",
+  },
+  {
+    videoSrc: "https://res.cloudinary.com/dfyeocma8/video/upload/v1771777816/emiiydxuoqlhmjbyvqsg.mp4",
+    poster: "https://res.cloudinary.com/dfyeocma8/video/upload/v1771777816/emiiydxuoqlhmjbyvqsg.jpg",
+    quote: "The mentorship provided clarity and direction. I highly recommend it to anyone looking to succeed in freelancing.",
+    name: "STUDENT",
   },
 ];
 
@@ -60,6 +70,7 @@ const imageTestimonials: ImageTestimonial[] = [
 
 const VideoTestimonialCard: React.FC<StoreTestimonial> = ({
   videoSrc,
+  poster,
   quote,
   name,
 }) => {
@@ -85,6 +96,7 @@ const VideoTestimonialCard: React.FC<StoreTestimonial> = ({
         <video
           ref={videoRef}
           preload="metadata"
+          poster={poster}
           controls={isPlaying}
           playsInline
           className="h-full w-full rounded-lg object-cover"
@@ -167,11 +179,12 @@ const ShopifyStores = () => {
         </p>
 
         {/* Use a responsive grid with gaps to create space between items */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-6 md:px-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-6 md:px-10">
           {stores.map((store, index) => (
             <VideoTestimonialCard
               key={index}
               videoSrc={store.videoSrc}
+              poster={store.poster}
               quote={store.quote}
               name={store.name}
             />
