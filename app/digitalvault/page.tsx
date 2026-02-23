@@ -28,7 +28,7 @@ const GetCourse = (props: Props) => {
   const plans = [
     {
       name: "1 Month",
-      price: "$5",
+      price: "₦7,000",
       priceSuffix: "/month",
       savings: null,
       href: "https://paystack.shop/pay/1-month-vault",
@@ -36,15 +36,15 @@ const GetCourse = (props: Props) => {
     },
     {
       name: "3 Months",
-      price: "$10.7",
-      savings: "Save $2",
+      price: "₦14,980",
+      savings: "Save ₦2,000",
       href: "https://paystack.shop/pay/3-month-vault",
       popular: true,
     },
     {
       name: "6 Months",
-      price: "$18.5",
-      savings: "Save $5",
+      price: "₦25,900",
+      savings: "Save ₦5,000",
       href: "https://paystack.shop/pay/6-months-vault",
       popular: false,
     },
