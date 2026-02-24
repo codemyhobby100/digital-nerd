@@ -61,7 +61,7 @@ export default async function BlogPostPage({
       <div className="w-full bg-[#060312]/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden min-h-screen flex flex-col items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-red-500 mb-4">Post Not Found</h1>
-          <p className="text-neutral-400 mb-8">The blog post you're looking for doesn't exist.</p>
+          <p className="text-neutral-400 mb-8">The blog post you&apos;re looking for doesn&apos;t exist.</p>
           <Link
             href="/blogs"
             className="inline-block px-6 py-3 bg-red-500 hover:bg-red-600 text-white font-semibold rounded-lg transition"
